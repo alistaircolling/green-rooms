@@ -32,8 +32,7 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
     //GALLERY ===========
     .state('gallery', {
         url: '/gallery',
-        templateUrl: 'partial-gallery.html',
-
+        templateUrl: 'partial-gallery.html'
       })
 
       //BOOK  ========
@@ -41,7 +40,7 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
       //GALLERY ===========
       .state('book', {
           url: '/book',
-          templateUrl: 'partial-book.html',
+          templateUrl: 'partial-book.html'
 
         })
 
