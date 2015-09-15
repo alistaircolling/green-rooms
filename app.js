@@ -36,6 +36,15 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
 
       })
 
+      //BOOK  ========
+
+      //GALLERY ===========
+      .state('book', {
+          url: '/book',
+          templateUrl: 'partial-book.html',
+
+        })
+
 
   // ABOUT PAGE AND MULTIPLE NAMED VIEWS =================================
   .state('about', {
