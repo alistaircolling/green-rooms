@@ -29,6 +29,13 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
       template: 'This was text passed from the router config.'
     })
 
+    //GALLERY ===========
+    .state('gallery', {
+        url: '/gallery',
+        templateUrl: 'partial-gallery.html',
+
+      })
+
 
   // ABOUT PAGE AND MULTIPLE NAMED VIEWS =================================
   .state('about', {
@@ -44,7 +51,7 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
       },
       //for column 2 we will define a separate controller - I wonder if I could create a separate js file for the controller rather than having it all in the massive app.js doc hmmm
       'columnTwo@about': {
-        
+
           templateUrl: 'table-data.html',
           controller: 'scotchController'
       }
