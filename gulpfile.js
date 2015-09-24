@@ -11,6 +11,7 @@ var print = require('gulp-print');
 var browserSync = require('browser-sync');
 var favicons = require('gulp-favicons');
 var del = require('del');
+var jshint = require('gulp-jshint');
 
 gulp.task('browser-sync', function() {
   browserSync({
@@ -51,20 +52,25 @@ gulp.task('styles', function() {
 });
 
 gulp.task('scripts', function() {
-  return gulp.src('src/js/**/*.js')
+  return gulp.src('src/js/*.js')
     .pipe(plumber({
       errorHandler: function(error) {
         console.log(error.message);
         this.emit('end');
       }
-    })) /* concat all js into one main.js file */
-    .pipe(concat('main.js'))
+    }))
+    //check for errors
+    .pipe(jshint())
+    .pipe(jshint.reporter('default'))
+
+  /* concat all js into one main.js file */
+  .pipe(concat('main.js'))
     // rename .min
-     .pipe(rename({
-       suffix: '.min'
-     }))
+    .pipe(rename({
+      suffix: '.min'
+    }))
     // uglify
-    .pipe(uglify())
+  //  .pipe(uglify())
     //put back in dist folder
     .pipe(gulp.dest('dist/js/'))
     //reload BS
@@ -87,11 +93,11 @@ gulp.task('clean', function() {
   return del(['dist']);
 });
 
-gulp.task('watch', function(){
+gulp.task('watch', function() {
   gulp.watch("src/styles/**/*.scss", ['styles']);
-  gulp.watch("src/js/**/*.js", ['scripts']);
+  gulp.watch("src/js/*.js", ['scripts']);
   gulp.watch("src/*.html", ['html']);
 })
-gulp.task('default', ['clean', 'styles', 'scripts', 'html', 'images','browser-sync', 'watch'], function() {
+gulp.task('default', ['clean', 'styles', 'scripts', 'html', 'images', 'browser-sync', 'watch'], function() {
 
 });
