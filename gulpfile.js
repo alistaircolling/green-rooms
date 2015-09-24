@@ -9,6 +9,8 @@ var imagemin = require('gulp-imagemin'),
 var sass = require('gulp-sass');
 var print = require('gulp-print');
 var browserSync = require('browser-sync');
+var favicons = require('gulp-favicons');
+var del = require('del');
 
 gulp.task('browser-sync', function() {
   browserSync({
@@ -57,12 +59,10 @@ gulp.task('scripts', function() {
       }
     })) /* concat all js into one main.js file */
     .pipe(concat('main.js'))
-    // pipe to dist folder
-    .pipe(gulp.dest('dist/js/'))
     // rename .min
-    .pipe(rename({
-      suffix: '.min'
-    }))
+     .pipe(rename({
+       suffix: '.min'
+     }))
     // uglify
     .pipe(uglify())
     //put back in dist folder
@@ -73,17 +73,25 @@ gulp.task('scripts', function() {
     }))
 });
 
-gulp.task('html', function(){
-  return gulp.src('src/*.html')
-  .pipe(gulp.dest('dist/'))
-  .pipe(print())
-  .pipe(browserSync.reload({
-    stream: true
-  }))
+gulp.task('html', function() {
+  return gulp.src(['src/*.html'])
+    .pipe(gulp.dest('dist/'))
+    .pipe(print())
+    .pipe(browserSync.reload({
+      stream: true
+    }))
 })
 
-gulp.task('default', ['browser-sync'], function() {
+/* Clean the dist folder */
+gulp.task('clean', function() {
+  return del(['dist']);
+});
+
+gulp.task('watch', function(){
   gulp.watch("src/styles/**/*.scss", ['styles']);
   gulp.watch("src/js/**/*.js", ['scripts']);
   gulp.watch("src/*.html", ['html']);
+})
+gulp.task('default', ['clean', 'styles', 'scripts', 'html', 'images','browser-sync', 'watch'], function() {
+
 });
