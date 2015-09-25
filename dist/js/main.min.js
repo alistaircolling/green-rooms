@@ -14,8 +14,6 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
     url: '/home',
     templateUrl: 'partial-home.html',
     controller: function($scope) {
-      // reset the scroll
-      $scope.window.scrollTo(0, 0);
     }
   })
 
@@ -39,7 +37,6 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
     templateUrl: 'partial-gallery.html',
     controller: function($scope) {
       // reset the scroll
-      $scope.window.scrollTo(0, 0);
     }
   })
 
@@ -71,7 +68,6 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
       templateUrl: 'partial-about.html',
       controller: function($scope) {
         // reset the scroll
-        $scope.window.scrollTo(0, 0);
       }
     }
 
