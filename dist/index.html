@@ -27,21 +27,25 @@
 <!-- apply our angular app to our site -->
 
 <body ng-app="routerApp">
-    <header class="bg-red">
 
-        <div class="h1 p3 center">
-            Header
+    <div class="flex flex-column" style="min-height:100vh">
+        <div class="flex flex-auto">
+            <div class="bold p2 mx-auto border blue">
+                Vertically Aligned Div
+            </div>
         </div>
-    </header>
-
-    <!-- MAIN CONTENT -->
-    <div class="container">
-
-        <!-- THIS IS WHERE WE WILL INJECT OUR CONTENT ============================== -->
-        <div ui-view></div>
+        <div class="flex flex-auto">
+            <div class="bold p2 mx-auto border blue">
+                Vertically Aligned Div
+            </div>
+        </div>
+        <div class="flex flex-auto">
+            <div class="bold p2 mx-auto border blue">
+                Vertically Aligned Div
+            </div>
+        </div>
 
     </div>
-
 </body>
 
 </html>
