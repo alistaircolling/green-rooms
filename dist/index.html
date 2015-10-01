@@ -27,33 +27,8 @@
 <!-- apply our angular app to our site -->
 
 <body ng-app="routerApp">
-
-    <header class="bg-green" style="min-height:10vh">
-        <div class="bold h1">GREEN ROOMS</div>
-    </header>
-    <div class="flex flex-column p3" style="min-height:90vh">
-
-        <div class="flex-auto center">
-            <div class="bold p1 mx-auto border blue">
-                +44 (0) 207 600100
-            </div>
-        </div>
-        <div class=" flex-auto center">
-            <div class="bold p3 mx-auto border blue">
-               100 KING ROAD, WOOD GREEN, LONDON N10 4ES
-            </div>
-        </div>
-
-        <div class=" flex-auto center">
-            <div class="bold p3 mx-auto border blue">
-                BEDS
-            </div>
-        </div>
-        <div class=" flex-auto center">
-            <div class="bold p3 mx-auto border blue">
-                ABOUT GREEN ROOMS
-            </div>
-        </div>
+<div class="h1 center bold">This is the top bit above the content that is injected in.</div>
+    <div ui-view></div>
 
     </div>
 </body>
