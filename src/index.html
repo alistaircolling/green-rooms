@@ -26,6 +26,14 @@
 
 <!-- apply our angular app to our site -->
 
+<nav class="clearfix white bg-black">
+  <div class="sm-col">
+    <a ui-sref="home" class="btn py2">HOME</a>
+    <a  ui-sref="location" class="btn py2">LOCATION</a>
+    <a  ui-sref="beds" class="btn py2">BEDS</a>
+    <a ui-sref="about" class="btn py2">ABOUT</a>
+  </div>
+</nav>
 <body ng-app="routerApp" style="">
     <div class="h1 center p3 m3 bold bg-teal" style="">This is the top bit above the content that is injected in.</div>
     <div ui-view style=""></div>
