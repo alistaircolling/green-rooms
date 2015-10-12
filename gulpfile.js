@@ -48,7 +48,7 @@ gulp.task('styles', function() {
         .pipe(gulp.dest('dist/styles/'))
         .pipe(browserSync.reload({
             stream: true
-        }))
+        }));
 });
 
 gulp.task('scripts', function() {
@@ -76,7 +76,7 @@ gulp.task('scripts', function() {
         //reload BS
         .pipe(browserSync.reload({
             stream: true
-        }))
+        }));
 });
 
 gulp.task('html', function() {
@@ -85,8 +85,8 @@ gulp.task('html', function() {
         .pipe(print())
         .pipe(browserSync.reload({
             stream: true
-        }))
-})
+        }));
+});
 
 /* Clean the dist folder */
 gulp.task('clean', function() {
@@ -97,7 +97,7 @@ gulp.task('watch', function() {
     gulp.watch("src/styles/**/*.scss", ['styles']);
     gulp.watch("src/js/*.js", ['scripts']);
     gulp.watch("src/*.html", ['html']);
-})
+});
 gulp.task('default', ['clean', 'styles', 'scripts', 'html', 'images', 'browser-sync', 'watch'], function() {
 
 });

@@ -91,5 +91,5 @@ routerApp.controller('pricesController', function($scope) {
     }, {
         name: 'Presidential',
         price: 50000000
-    }]
-})
+    }];
+});
