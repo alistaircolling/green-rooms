@@ -16,7 +16,6 @@
             border-radius: 0;
         }
     </style>
-
     <!-- JS (load angular, ui-router, and our custom js file) -->
     <script src="http://code.angularjs.org/1.2.13/angular.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
@@ -25,18 +24,19 @@
 </head>
 
 <!-- apply our angular app to our site -->
-
-<nav class="clearfix white bg-black">
-  <div class="sm-col">
-    <a ui-sref="home" class="btn py2">HOME</a>
-    <a  ui-sref="location" class="btn py2">LOCATION</a>
-    <a  ui-sref="beds" class="btn py2">BEDS</a>
-    <a ui-sref="about" class="btn py2">ABOUT</a>
-  </div>
-</nav>
+  <h1>.bg-center</h1>
+</div>
 <body ng-app="routerApp" style="">
+<div class="bg-contain white bg-gray" style="background-image: url(assets/images/bw-green-room.jpg)">
+    <nav class= "lg-show clearfix white bg-black ">
+        <div class="sm-col">
+            <a ui-sref="home" class="btn py2">HOME</a>
+            <a ui-sref="location" class="btn py2">LOCATION</a>
+            <a ui-sref="beds" class="btn py2">BEDS</a>
+            <a ui-sref="about" class="btn py2">ABOUT</a>
+        </div>
+    </nav>
     <div ui-view style=""></div>
-
 </body>
 
 </html>

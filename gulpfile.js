@@ -26,13 +26,13 @@ gulp.task('bs-reload', function() {
 });
 
 gulp.task('images', function() {
-    gulp.src('src/assets/**/*')
+    gulp.src('src/assets/images/*.jpg')
         .pipe(cache(imagemin({
             optimizationLevel: 3,
             progressive: true,
             interlaced: true
         })))
-        .pipe(gulp.dest('dist/assets/'));
+        .pipe(gulp.dest('dist/assets/images/'));
 });
 
 gulp.task('styles', function() {
@@ -97,6 +97,7 @@ gulp.task('watch', function() {
     gulp.watch("src/styles/**/*.scss", ['styles']);
     gulp.watch("src/js/*.js", ['scripts']);
     gulp.watch("src/*.html", ['html']);
+    gulp.watch("src/assets/images/*.jpg", ['images']);
 });
 gulp.task('default', ['clean', 'styles', 'scripts', 'html', 'images', 'browser-sync', 'watch'], function() {
 
