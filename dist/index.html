@@ -16,6 +16,40 @@
             border-radius: 0;
         }
     </style>
+    <style>
+        #bg {
+            position: fixed;
+            top: 45%;
+            left: 0;
+            width: 100%;
+        }
+        #bg img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            min-width: 50%;
+            min-height: 50%;
+        }
+        #page-wrap {
+            position: relative;
+            z-index: 2;
+            width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            background: white;
+            -moz-box-shadow: 0 0 20px black;
+            -webkit-box-shadow: 0 0 20px black;
+            box-shadow: 0 0 20px black;
+        }
+        p {
+            font: 15px/2 Georgia, Serif;
+            margin: 0 0 30px 0;
+            text-indent: 40px;
+        }
+    </style>
     <!-- JS (load angular, ui-router, and our custom js file) -->
     <script src="http://code.angularjs.org/1.2.13/angular.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
@@ -24,9 +58,13 @@
 </head>
 
 <!-- apply our angular app to our site -->
-<body ng-app="routerApp" style="max-width:100vw">
-<div class="lg-show bg-red m1 p3 red border border-red m3" style="background-image: url(assets/images/bw-green-room.jpg)">
-    <nav class= "lg-show clearfix white bg-black ">
+
+<body ng-app="routerApp" style="">
+    <!--<div id="bg">-->
+    <!--<img src="assets/images/bw-green-room.jpg" alt="">-->
+    <!--</div>-->
+    <!---    NAV ---- FIXED --->
+    <nav class="sm-show clearfix white bg-black" style="position:fixed;z-index:1">
         <div class="sm-col">
             <a ui-sref="home" class="btn py2">HOME</a>
             <a ui-sref="location" class="btn py2">LOCATION</a>
@@ -34,7 +72,17 @@
             <a ui-sref="about" class="btn py2">ABOUT</a>
         </div>
     </nav>
-    <div ui-view style=""></div>
+    <div id="page-wrap">
+
+        <div ui-view style="z-index:10"></div>
+    </div>
+
+    <!-- At bottom, 'cause it's not really content -->
+    <div id="bg">
+        <img src="assets/images/bw-green-room.jpg" alt="">
+    </div>
+
+
 </body>
 
 </html>
