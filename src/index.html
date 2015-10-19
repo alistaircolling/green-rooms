@@ -53,21 +53,20 @@
     <!--<img src="assets/images/bw-green-room.jpg" alt="">-->
     <!--</div>-->
     <!---    NAV ---- FIXED --->
-    <nav class="sm-show clearfix white bg-black" style="position:fixed;z-index:1">
+    <nav class="lg-show clearfix white bg-black" style="position:fixed;z-index:1">
         <div class="sm-col">
             <a ui-sref="home" class="btn py2">HOME</a>
-            <a ui-sref="location" class="btn py2">LOCATION</a>
             <a ui-sref="beds" class="btn py2">BEDS</a>
             <a ui-sref="about" class="btn py2">ABOUT</a>
         </div>
     </nav>
-    <div id="page-wrap">
+    <div id="page-wrap" style="z-index:0">
 
-        <div ui-view style="z-index:10"></div>
+        <div ui-view></div>
     </div>
 
     <!-- At bottom, 'cause it's not really content -->
-    <div id="bg">
+    <div id="bg" style="z-index:-1">
         <img src="assets/images/bw-green-room.jpg" alt="">
     </div>
 

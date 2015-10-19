@@ -29,7 +29,7 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
             url: '/paragraph',
             template: 'This was text passed from the router config.'
         })
-                   //BEDS ===========
+        //BEDS ===========
         .state('beds', {
             url: '/beds',
             views: {
@@ -46,7 +46,7 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
             }
         })
 
-                    //LOCATION    ===========
+    //LOCATION    ===========
     .state('location', {
         url: '/location',
         templateUrl: 'partial-location.html',
@@ -55,7 +55,7 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
         }
     })
 
-                  // ABOUT PAGE AND MULTIPLE NAMED VIEWS =================================
+    // ABOUT PAGE AND MULTIPLE NAMED VIEWS =================================
     .state('about', {
         url: '/about',
         views: {
@@ -92,4 +92,10 @@ routerApp.controller('pricesController', function($scope) {
         name: 'Presidential',
         price: 50000000
     }];
+});
+routerApp.run(function($rootScope, $location) { // LISTEN FOR STATE CHANGES
+    $rootScope.$on('$stateChangeStart',
+        function(event, toState, toParams, fromState, fromParams) {
+            console.log("STATE:" + toState.name); // do something
+        });
 });
