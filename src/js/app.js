@@ -2,6 +2,28 @@
 //the routerApp used for all routing of states, views and URLs
 
 var routerApp = angular.module('routerApp', ['ui.router']);
+// HOME  CONTROLLER 
+routerApp.controller('HomeController', function($scope, $state) {
+            $scope.state = $state;
+});
+
+
+routerApp.controller('pricesController', function($scope) {
+
+    $scope.message = 'test';
+
+    $scope.rooms = [{
+        name: 'Basic',
+        price: 50
+    }, {
+        name: 'En-suite',
+        price: 1000
+    }, {
+        name: 'Presidential',
+        price: 50000000
+    }];
+});
+
 
 routerApp.config(function($stateProvider, $urlRouterProvider) {
 
@@ -13,7 +35,7 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
         .state('home', {
         url: '/home',
         templateUrl: 'partial-home.html',
-        controller: function($scope) {}
+        controller: 'HomeController'
     })
 
     //nested list with custom controller - I think the scope is passed and the dogs array is attached. presumably I could specify a controller with its own js file for example that requested the data from an API
@@ -74,28 +96,18 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
 });
 
 
-//MAPPING a controller to the router - as above is it better to do this in a separete js file hmm?
+/*routerApp.run(function($rootScope, $location) { // LISTEN FOR STATE CHANGES*/
+//$rootScope.$on('$stateChangeStart',
+//function(event, toState, toParams, fromState, fromParams) {
+//console.log("
+                    //STATE: " + toState.name); // do something
+//switch (toState.name) {
+//case 'home':
+//$rootScope.state = toState.name;
+//break
+//default:
 
-//this is the controller that is defined above that is used in the 'about' state
 
-routerApp.controller('pricesController', function($scope) {
-
-    $scope.message = 'test';
-
-    $scope.rooms = [{
-        name: 'Basic',
-        price: 50
-    }, {
-        name: 'En-suite',
-        price: 1000
-    }, {
-        name: 'Presidential',
-        price: 50000000
-    }];
-});
-routerApp.run(function($rootScope, $location) { // LISTEN FOR STATE CHANGES
-    $rootScope.$on('$stateChangeStart',
-        function(event, toState, toParams, fromState, fromParams) {
-            console.log("STATE:" + toState.name); // do something
-        });
-});
+//}
+//});
+/*});*/
