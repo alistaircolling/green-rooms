@@ -2,27 +2,7 @@
 //the routerApp used for all routing of states, views and URLs
 
 var routerApp = angular.module('routerApp', ['ui.router']);
-// HOME  CONTROLLER 
-routerApp.controller('HomeController', function($scope, $state) {
-            $scope.state = $state;
-});
 
-
-routerApp.controller('pricesController', function($scope) {
-
-    $scope.message = 'test';
-
-    $scope.rooms = [{
-        name: 'Basic',
-        price: 50
-    }, {
-        name: 'En-suite',
-        price: 1000
-    }, {
-        name: 'Presidential',
-        price: 50000000
-    }];
-});
 
 
 routerApp.config(function($stateProvider, $urlRouterProvider) {
@@ -34,8 +14,7 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
     // HOME STATES AND NESTED VIEWS ========================================
         .state('home', {
         url: '/home',
-        templateUrl: 'partial-home.html',
-        controller: 'HomeController'
+        templateUrl: 'partial-home.html'
     })
 
     //nested list with custom controller - I think the scope is passed and the dogs array is attached. presumably I could specify a controller with its own js file for example that requested the data from an API
@@ -94,7 +73,27 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
     });
 
 });
+// HOME  CONTROLLER 
+routerApp.controller('HomeController', [function($scope, $state) {
+            this.state = $state;
+}]);
 
+
+routerApp.controller('pricesController', function($scope) {
+
+    $scope.message = 'test';
+
+    $scope.rooms = [{
+        name: 'Basic',
+        price: 50
+    }, {
+        name: 'En-suite',
+        price: 1000
+    }, {
+        name: 'Presidential',
+        price: 50000000
+    }];
+});
 
 /*routerApp.run(function($rootScope, $location) { // LISTEN FOR STATE CHANGES*/
 //$rootScope.$on('$stateChangeStart',
