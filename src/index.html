@@ -11,6 +11,7 @@
     <!-- Load BASS CSS -->
     <link href="http://d2v52k3cl9vedd.cloudfront.net/basscss/7.0.4/basscss.min.css"
     rel="stylesheet">
+    <link href="styles/main.css" rel="stylesheet">
     <style>
         .navbar {
             border-radius: 0;
@@ -52,14 +53,14 @@
     <!--<div id="bg">-->
     <!--<img src="assets/images/bw-green-room.jpg" alt="">-->
     <!--</div>-->
-    <!---    NAV ---- FIXED --->
-    <div class="flex center">
-        <nav class="flex bg-black center" style="position:fixed;z-index:1">
-            <a ui-sref="home" class="btn py2 h1 p4 border bg-green">HOME</a>
-            <a ui-sref="beds" class="btn py2 h1 p4 bg-orange">BEDS</a>
-            <a ui-sref="about" class="btn py2 h1 p4 bg-teal">ABOUT</a>
-        </nav>
+    <div class="flex flex-center p2" style="min-width:100vw">
+        <div class="mx-auto border white">
+            <a ui-sref="home" class="btn px-auto h1 p4 border bg-green">HOME</a>
+            <a ui-sref="beds" class="btn h1 p4 bg-orange">BEDS</a>
+            <a ui-sref="about" class="btn h1 p4 bg-teal">ABOUT</a>
+        </div>
     </div>
+    <!---    NAV ---- FIXED --->
     <div id="page-wrap" style="z-index:0; max-height:60vh">
 
         <div ui-view></div>
