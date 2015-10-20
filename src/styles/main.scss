@@ -1,9 +1,10 @@
+@font-face { font-family: Pitch; src: url('assets/fonts/Pitch-Regular.otf'); } 
+@font-face { font-family: Pitch; font-weight: lighter; src: url('assets/fonts/Pitch-Light.otf');}
+*{
+font-family:Pitch;
+font-weight: lighter;
+}
 .h1 {
   /*font-size:6vw;*/
-}
-h2 {
-  font-size: 3.0vh;
-}
-p {
-  font-size: 2vmin;
+/*font-family:Pitch;*/
 }
