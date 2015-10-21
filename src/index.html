@@ -54,21 +54,24 @@
     <!--<img src="assets/images/bw-green-room.jpg" alt="">-->
     <!--</div>-->
     <div class="clearfix p3">
-        <div class="mx-auto border white">
-            <a ui-sref="home" class="sm-col sm-col-4 center">HOME</a>
-            <a ui-sref="beds" class="sm-col sm-col-4 center">BEDS</a>
+        <div class="mx-auto menu-bar">
+          <!--  <a ui-sref="home" class="sm-col sm-col-4 center">HOME</a>-->
+            <!--<a ui-sref="beds" class="sm-col sm-col-4 center">BEDS</a>-->
             <!--<a ui-sref="about" class="sm-col sm-col-4 center menu-button">ABOUT</a>-->
             <!--- custom menu button attempt --->
-            <div class="flex flex-center">
-                <!-- BG IMAGE -->
-                <div class="mx-auto my-auto">
-                    <img src="assets/images/blue-ball-pattern.jpg" style="position:absolute;z-index:1" />
-                </div>
-                <div class="h1 p2 mx-auto align-middle bg-green" style="z-index:2;position:absolute" >
-                    ABOUT
-                </div>
+            <button ui-sref="home" class="h1 btn m2 btn-outline mb1 olive bg-white">HOME</button>
+            <button ui-sref="beds" class="h1 btn m2 btn-outline mb1 orange bg-white">BEDS</button>
+            <button ui-sref="about" class="h1 btn m2 btn-outline mb1 blue bg-white">ABOUT</button>
+            <!--<div class="">-->
+            <!-- BG IMAGE -->
+            <!-- <div class="mx-auto my-auto">-->
+            <!--<img src="assets/images/blue-ball-pattern.jpg" style="position:absolute;z-index:1" />-->
+            <!--</div>-->
+            <!--  <a ui-sref="about" class="h1 p2 mx-auto align-middle bg-green border border-color-red" style="z-index:2;position:absolute" >-->
+            <!--ABOUT-->
+            <!--</a>-->
 
-            </div>
+            <!--</div>-->
 
 
         </div>
@@ -80,7 +83,7 @@
     </div>
 
     <!-- At bottom, 'cause it's not really content -->
-    <div id="bg" style="z-index:-1">
+    <div id="bg" style="z-index:-1;visibility:hidden">
         <img src="assets/images/bw-green-room.jpg" alt="">
     </div>
 
