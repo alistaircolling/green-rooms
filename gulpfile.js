@@ -113,7 +113,7 @@ gulp.task('watch', function() {
 });
 
 gulp.task('default', function(callback) {
-    //wit until clean has finished before running other tasks in paralell
+    //wait until clean has finished before running other tasks in paralell
     runSequence('clean', ['styles', 'scripts', 'html', 'images', 'fonts', 'browser-sync', 'watch'],
         callback);
 });
