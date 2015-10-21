@@ -11,7 +11,8 @@ var gulp = require('gulp'),
     browserSync = require('browser-sync'),
     favicons = require('gulp-favicons'),
     del = require('del'),
-    jshint = require('gulp-jshint');
+    jshint = require('gulp-jshint'),
+    runSequence = require('run-sequence');
 
 gulp.task('browser-sync', function() {
     browserSync({
