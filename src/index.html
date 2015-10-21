@@ -49,7 +49,7 @@
 
 <!-- apply our angular app to our site -->
 
-<body ng-app="routerApp" style="">
+<body ng-app="routerApp" style="" autoscroll="false">
     <!--<div id="bg">-->
     <!--<img src="assets/images/bw-green-room.jpg" alt="">-->
     <!--</div>-->
@@ -79,7 +79,7 @@
     <!---    NAV ---- FIXED --->
     <div id="page-wrap" style="z-index:0; max-height:60vh">
 
-        <div ui-view></div>
+        <div ui-view autoscroll="false"></div>
     </div>
 
     <!-- At bottom, 'cause it's not really content -->
