@@ -35,3 +35,26 @@ $green-rooms-red: #EF4123;
     border-color:$green-rooms-red;
     color:$green-rooms-red;
 }
+.button-blue{
+    border-color:$green-rooms-blue;
+    color:$green-rooms-blue;
+}
+.button-black{
+    border-color:black;
+    color:black;
+}
+.button-red-bg{
+    background: $green-rooms-red;
+    border-color: white;
+    color: white;
+}
+.button-blue-bg{
+    background: $green-rooms-blue;
+    border-color: white;
+    color: white;
+}
+.button-black-bg{
+    background:black;
+    border-color: white;
+    color: white;
+}
