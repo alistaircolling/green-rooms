@@ -1,0 +1,51 @@
+@font-face {
+  font-family: Pitch;
+  src: url("../assets/fonts/Pitch-Regular.otf"); }
+
+@font-face {
+  font-family: Pitch;
+  font-weight: lighter;
+  src: url("../assets/fonts/Pitch-Light.otf"); }
+
+* {
+  font-family: Pitch;
+  font-weight: lighter; }
+
+.h1 {
+  line-height: 1em;
+  font-weight: lighter; }
+
+.menu-button {
+  background: url("../assets/images/blue-ball-pattern.jpg") no-repeat; }
+
+.menu-bar {
+  background: url("../assets/images/blue-ball-pattern.jpg") no-repeat; }
+
+.button-red {
+  border-color: #EF4123;
+  color: #EF4123; }
+
+.button-blue {
+  border-color: #034EC9;
+  color: #034EC9;
+  border-style: solid;
+  border-width: 1px; }
+
+.button-black {
+  border-color: black;
+  color: black; }
+
+.button-red-bg {
+  background: #EF4123;
+  border-color: white;
+  color: white; }
+
+.button-blue-bg {
+  background: #034EC9;
+  border-color: white;
+  color: white; }
+
+.button-black-bg {
+  background: black;
+  border-color: white;
+  color: white; }

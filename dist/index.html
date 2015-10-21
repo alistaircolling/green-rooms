@@ -1,0 +1,93 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <!-- CSS (load bootstrap) -->
+    <!--<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"> -->
+
+    <!-- Load BASS CSS -->
+    <link href="http://d2v52k3cl9vedd.cloudfront.net/basscss/7.0.4/basscss.min.css"
+    rel="stylesheet">
+    <link href="styles/main.css" rel="stylesheet">
+    <style>
+        .navbar {
+            border-radius: 0;
+        }
+    </style>
+    <style>
+        #bg {
+            position: fixed;
+            top: 0%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        #bg img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            min-width: 100%;
+            min-height: 100%;
+        }
+        #page-wrap {
+            position: relative;
+            z-index: 2;
+        }
+    </style>
+    <!-- JS (load angular, ui-router, and our custom js file) -->
+    <script src="http://code.angularjs.org/1.2.13/angular.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
+    <script src="js/main.min.js"></script>
+
+</head>
+
+<!-- apply our angular app to our site -->
+
+<body ng-app="routerApp" style="" autoscroll="false">
+    <!--<div id="bg">-->
+    <!--<img src="assets/images/bw-green-room.jpg" alt="">-->
+    <!--</div>-->
+    <div class="">
+        <div class="menu-bar">
+            <!--  <a ui-sref="home" class="sm-col sm-col-4 center">HOME</a>-->
+            <!--<a ui-sref="beds" class="sm-col sm-col-4 center">BEDS</a>-->
+            <!--<a ui-sref="about" class="sm-col sm-col-4 center menu-button">ABOUT</a>-->
+            <!--- custom menu button attempt --->
+            <button ui-sref="home" class="h2 btn m2 p2 px3 mb1 button-red-bg" >HOME</button>
+            <button ui-sref="beds" class="h2 btn m2 p2 px3 mb1 button-blue-bg">BEDS</button>
+            <button ui-sref="about" class="h2 btn m2 p2 px3 b1 button-black-bg"">ABOUT</button>
+            <!--<div class="">-->
+            <!-- BG IMAGE -->
+            <!-- <div class="mx-auto my-auto">-->
+            <!--<img src="assets/images/blue-ball-pattern.jpg" style="position:absolute;z-index:1" />-->
+            <!--</div>-->
+            <!--  <a ui-sref="about" class="h1 p2 mx-auto align-middle bg-green border border-color-red" style="z-index:2;position:absolute" >-->
+            <!--ABOUT-->
+            <!--</a>-->
+
+            <!--</div>-->
+
+
+        </div>
+    </div>
+    <!---    NAV ---- FIXED --->
+    <div id="page-wrap" style="z-index:0; max-height:60vh">
+
+        <div ui-view autoscroll="false"></div>
+    </div>
+
+    <!-- At bottom, 'cause it's not really content -->
+    <div id="bg" style="z-index:-1;visibility:hidden">
+        <img src="assets/images/bw-green-room.jpg" alt="">
+    </div>
+
+
+</body>
+
+</html>
