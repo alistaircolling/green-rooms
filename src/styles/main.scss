@@ -9,6 +9,9 @@
   src: url("../assets/fonts/Pitch-Light.otf");
 }
 
+$green-rooms-blue: #034EC9;
+$green-rooms-red: #EF4123;
+
 * {
   font-family: Pitch;
   font-weight: lighter;
@@ -27,4 +30,8 @@
 
     background: url('../assets/images/blue-ball-pattern.jpg') no-repeat;
 
+}
+.button-red{
+    border-color:$green-rooms-red;
+    color:$green-rooms-red;
 }
