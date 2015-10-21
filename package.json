@@ -23,6 +23,7 @@
     "gulp-uglify": "1.2.0"
   },
   "dependencies": {
-    "del": "^2.0.2"
+    "del": "^2.0.2",
+    "imagemin-jpegtran": "^4.3.1"
   }
 }

@@ -1,12 +1,12 @@
 @font-face {
   font-family: Pitch;
-  src: url("assets/fonts/Pitch-Regular.otf");
+  src: url("../assets/fonts/Pitch-Regular.otf");
 }
 
 @font-face {
   font-family: Pitch;
   font-weight: lighter;
-  src: url("assets/fonts/Pitch-Light.otf");
+  src: url("../assets/fonts/Pitch-Light.otf");
 }
 
 * {
@@ -20,6 +20,6 @@
 }
 
 .menu-button {
-    background: url('assets/images/blue-ball-pattern.jpg') no-repeat;
+    background: url('../assets/images/blue-ball-pattern.jpg') no-repeat;
 
 }
