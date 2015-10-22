@@ -46,6 +46,17 @@ gulp.task('fonts', function() {
     .pipe(gulp.dest('dist/assets/fonts/'));
 });
 
+gulp.task('copy-svgs', function() {
+    return gulp.src('src/assets/images/*.svg').pipe(plumber({
+        errorHandler: function(error) {
+            console.log(error.message);
+            this.emit('end');
+        }
+    }))
+
+    .pipe(gulp.dest('dist/assets/images/'));
+});
+
 gulp.task('styles', function() {
     return gulp.src(['src/styles/*.scss'])
         .pipe(plumber({
@@ -109,11 +120,12 @@ gulp.task('watch', function() {
     gulp.watch("src/js/*.js", ['scripts']);
     gulp.watch("src/*.html", ['html']);
     gulp.watch("src/assets/images/*.jpg", ['images']);
+    gulp.watch("src/assets/images/*.svg", ['copy-svgs']);
     gulp.watch("src/assets/fonts/*.otf", ['fonts']);
 });
 
 gulp.task('default', function(callback) {
     //wait until clean has finished before running other tasks in paralell
-    runSequence('clean', ['styles', 'scripts', 'html', 'images', 'fonts', 'browser-sync', 'watch'],
+    runSequence('clean', ['styles', 'scripts', 'html', 'images', 'copy-svgs', 'fonts', 'browser-sync', 'watch'],
         callback);
 });

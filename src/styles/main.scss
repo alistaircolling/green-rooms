@@ -24,42 +24,46 @@ $green-rooms-red: #EF4123;
 
 .menu-button {
     background: url('../assets/images/blue-ball-pattern.jpg') no-repeat;
-
 }
 .menu-bar{
-
     background: url('../assets/images/blue-ball-pattern.jpg') no-repeat;
-
 }
 
-.pattern1-bg{
-    background: url('../assets/images/pattern-1.svg') no-repeat;
+.pattern-bg-1{
+    background: url('../assets/images/pattern-1.svg');
 }
-.button-red{
+.pattern-bg-2{
+    background: url('../assets/images/pattern-2.svg');
+}
+.pattern-bg-3{
+    background: url('../assets/images/pattern-3.svg');
+}
+.red-line{
     border-color:$green-rooms-red;
     color:$green-rooms-red;
+    background:white;
 }
-.button-blue{
+.blue-line{
     border-color:$green-rooms-blue;
     color:$green-rooms-blue;
-     border-style:solid;
-    border-width:1px;
+    background:white;
 }
-.button-black{
+.black-line{
     border-color:black;
     color:black;
+    background:white;
 }
-.button-red-bg{
+.red-bg{
     background: $green-rooms-red;
     border-color: white;
     color: white;
 }
-.button-blue-bg{
+.blue-bg{
     background: $green-rooms-blue;
     border-color: white;
     color: white;
 }
-.button-black-bg{
+.black-bg{
     background:black;
     border-color: white;
     color: white;

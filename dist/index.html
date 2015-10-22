@@ -55,25 +55,17 @@
     <!--</div>-->
     <div class="">
         <div class="">
-            <!--  <a ui-sref="home" class="sm-col sm-col-4 center">HOME</a>-->
-            <!--<a ui-sref="beds" class="sm-col sm-col-4 center">BEDS</a>-->
-            <!--<a ui-sref="about" class="sm-col sm-col-4 center menu-button">ABOUT</a>-->
-            <!--- custom menu button attempt --->
-            <button ui-sref="home" class="h2 btn m2 p2 px3 mb1 button-red-bg" >HOME</button>
-            <button ui-sref="beds" class="h2 btn m2 p2 px3 mb1 button-blue-bg">BEDS</button>
-            <button ui-sref="about" class="h2 btn m2 p2 px3 b1 button-black-bg">ABOUT</button>
-            <!--<div class="">-->
-            <!-- BG IMAGE -->
-            <!-- <div class="mx-auto my-auto">-->
-            <!--<img src="assets/images/blue-ball-pattern.jpg" style="position:absolute;z-index:1" />-->
-            <!--</div>-->
-            <!--  <a ui-sref="about" class="h1 p2 mx-auto align-middle bg-green border border-color-red" style="z-index:2;position:absolute" >-->
-            <!--ABOUT-->
-            <!--</a>-->
-
-            <!--</div>-->
-
-
+            <button ui-sref="home" class="h2 btn m2 p2 px3 mb1 red-line" >HOME</button>
+            <button ui-sref="beds" class="h2 btn m2 p2 px3 mb1 blue-line">BEDS</button>
+            <button ui-sref="about" class="h2 btn m2 p2 px3 b1 black-line">ABOUT</button>
+            <!-- CUSTOM BORDER --->
+            <div class="border pattern-bg-3 mx-auto" style="max-width:200px; border-width:15px; border-image:url('assets/images/pattern-1.svg')"> 
+                <div style="background:white;max-width:60%;max-height:60%">
+                    <div class="h1">
+                        Have I got a little border?
+                    </div>
+                </div>
+            </div>            
         </div>
     </div>
     <!---    NAV ---- FIXED --->
@@ -83,8 +75,8 @@
     </div>
 
     <!-- At bottom, 'cause it's not really content -->
-    <div id="bg" style="z-index:-1;visibility:visible" class="">
-        <img src="assets/images/pattern1.svg" alt="">
+    <div id="bg" style="z-index:-1;visibility:hidden" class="pattern-bg-1">
+        <!--<img src="assets/images/pattern-1.svg" alt="">-->
     </div>
 
 
