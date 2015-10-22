@@ -31,10 +31,13 @@ $green-rooms-red: #EF4123;
     background: url('../assets/images/blue-ball-pattern.jpg') no-repeat;
 
 }
+
+.pattern1-bg{
+    background: url('../assets/images/pattern-1.svg') no-repeat;
+}
 .button-red{
     border-color:$green-rooms-red;
     color:$green-rooms-red;
-  
 }
 .button-blue{
     border-color:$green-rooms-blue;

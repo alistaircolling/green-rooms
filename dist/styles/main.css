@@ -21,6 +21,9 @@
 .menu-bar {
   background: url("../assets/images/blue-ball-pattern.jpg") no-repeat; }
 
+.pattern1-bg {
+  background: url("../assets/images/pattern-1.svg") no-repeat; }
+
 .button-red {
   border-color: #EF4123;
   color: #EF4123; }
