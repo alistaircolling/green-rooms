@@ -9,8 +9,9 @@
   src: url("../assets/fonts/Pitch-Light.otf");
 }
 
-$green-rooms-blue: #034EC9;
-$green-rooms-red: #EF4123;
+$blue: #034EC9;
+$red: #EF4123;
+
 * {
   font-family: Pitch;
   font-weight: lighter;
@@ -20,9 +21,47 @@ $green-rooms-red: #EF4123;
   line-height: 1em;
   font-weight: lighter;
 }
-.temp-style{
-          
+
+@mixin color-bg-theme($bg-color:white, $foreground-color:white){
+   background-color: $bg-color;
+   border-color: $foreground-color;
+   //TEXT COLOR
+   color: $foreground-color;
+   text:{
+      transform: uppercase;
+      decoration:none;
+   }
+   &:hover{
+      background-color:$foreground-color;
+      border-color:$bg-color;
+      color:$bg-color;
+   }
+   &:active{
+      background-color:blue;
+      border-color:$bg-color;
+      color:$bg-color;
+   }
 }
+.red-bg{
+    @include color-bg-theme($bg-color:$red);
+}
+.blue-bg{
+    @include color-bg-theme($bg-color:$blue);
+}
+.black-bg{
+    @include color-bg-theme($bg-color:black);
+}
+.red-foreground{
+    @include color-bg-theme($foreground-color:$red);
+}
+.blue-foreground{
+    @include color-bg-theme($foreground-color:$blue);
+}
+.black-foreground{
+    @include color-bg-theme($foreground-color:black);
+}
+
+
 
 .menu-button {
     background: url('../assets/images/blue-ball-pattern.jpg') no-repeat;
@@ -39,34 +78,4 @@ $green-rooms-red: #EF4123;
 }
 .pattern-bg-3{
     background: url('../assets/images/pattern-3.svg');
-}
-.red-line{
-    border-color:$green-rooms-red;
-    color:$green-rooms-red;
-    background:white;
-}
-.blue-line{
-    border-color:$green-rooms-blue;
-    color:$green-rooms-blue;
-    background:white;
-}
-.black-line{
-    border-color:black;
-    color:black;
-    background:white;
-}
-.red-bg{
-    background: $green-rooms-red;
-    border-color: white;
-    color: white;
-}
-.blue-bg{
-    background: $green-rooms-blue;
-    border-color: white;
-    color: white;
-}
-.black-bg{
-    background:black;
-    border-color: white;
-    color: white;
 }
