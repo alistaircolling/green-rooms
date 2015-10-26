@@ -1,9 +1,9 @@
 // app.js
 //the routerApp used for all routing of states, views and URLs
 
+//console.re.log('remote log test--------------------------------');
+
 var routerApp = angular.module('routerApp', ['ui.router']);
-
-
 
 routerApp.config(function($stateProvider, $urlRouterProvider) {
 
