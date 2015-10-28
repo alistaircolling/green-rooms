@@ -1,0 +1,42 @@
+$blue:#034EC9;
+$red:#EF4123;
+$total-patterns:6;
+//TODO needs to be extended for use in (non interactive) textboxes and buttons
+@mixin color-bg-theme($bg-color:white,
+$foreground-color:white) {
+    background-color: $bg-color;
+    border-color: $foreground-color;
+    //TEXT COLOR
+    color: $foreground-color;
+    text: {
+        transform: uppercase;
+        decoration: none;
+    }
+    &:hover {
+        background-color: $foreground-color;
+        border-color: $bg-color;
+        color: $bg-color;
+    }
+    &:active {
+        background-color: blue;
+        border-color: $bg-color;
+        color: $bg-color;
+    }
+    &:focus {
+        box-shadow: none;
+    }
+}
+//creates patterns when passed a number
+@mixin return-pattern($number) {
+    background: url(return-pattern-url($number));
+}
+// ret
+@function return-pattern-url($value) {
+    @return '../assets/images/pattern-'+$value+'.svg'
+    /*@if $value=="foo" {*/
+    /*@return $foo;*/
+    /*}*/
+    /*@else {*/
+    /*@return $bar;*/
+    /*}*/
+}
