@@ -23,14 +23,16 @@ $foreground-color:white) {
         background-color: $foreground-color;
         border-color: $bg-color;
         color: $bg-color;
+        cursor:pointer;
     }
     &:active {
-        background-color: blue;
-        border-color: $bg-color;
-        color: $bg-color;
+        background-color: $bg-color;
+        border-color: $foreground-color;
+        color: $foreground-color;
     }
     &:focus {
         box-shadow: none;
+        outline: none;
     }
 }
 
