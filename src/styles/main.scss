@@ -41,6 +41,9 @@ $red: #EF4123;
       border-color:$bg-color;
       color:$bg-color;
    }
+   &:focus{
+      box-shadow:none;
+   }    
 }
 .red-bg{
     @include color-bg-theme($bg-color:$red);

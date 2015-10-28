@@ -46,6 +46,16 @@ gulp.task('fonts', function() {
     .pipe(gulp.dest('dist/assets/fonts/'));
 });
 
+gulp.task('copy-yml', function() {
+    return gulp.src('src/*.yml').pipe(plumber({
+        errorHandler: function(error) {
+            console.log(error.message);
+            this.emit('end');
+        }
+    }))
+    .pipe(gulp.dest('dist/'));
+});
+
 gulp.task('copy-svgs', function() {
     return gulp.src('src/assets/images/*.svg').pipe(plumber({
         errorHandler: function(error) {
@@ -53,7 +63,6 @@ gulp.task('copy-svgs', function() {
             this.emit('end');
         }
     }))
-
     .pipe(gulp.dest('dist/assets/images/'));
 });
 
@@ -126,6 +135,6 @@ gulp.task('watch', function() {
 
 gulp.task('default', function(callback) {
     //wait until clean has finished before running other tasks in paralell
-    runSequence('clean', ['styles', 'scripts', 'html', 'images', 'copy-svgs', 'fonts', 'browser-sync', 'watch'],
+    runSequence('clean', ['styles', 'scripts', 'html', 'images', 'copy-yml', 'copy-svgs', 'fonts', 'browser-sync', 'watch'],
         callback);
 });
