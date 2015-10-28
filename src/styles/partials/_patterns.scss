@@ -1,3 +1,13 @@
+//creates patterns when passed a number
+@mixin return-pattern($number) {
+    background: url(return-pattern-url($number));
+}
+
+// return the pattern of this number
+@function return-pattern-url($value) {
+    @return '../assets/images/pattern-'+$value+'.svg'
+}
+
 .pattern-bg-1 {
     @include return-pattern(1);
 }
@@ -25,3 +35,4 @@
 .pattern-bg-9 {
     @include return-pattern(9);
 }
+

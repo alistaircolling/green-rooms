@@ -1,3 +1,17 @@
+@mixin color-bg-theme($bg-color:white,
+$foreground-color:white) {
+    background-color: $bg-color;
+    border-color: $foreground-color;
+    border: .1em;
+    border-style:solid;
+    //TEXT COLOR
+    color: $foreground-color;
+    text: {
+        transform: uppercase;
+        decoration: none;
+    }
+}
+
 .red-bg{
     @include color-bg-theme($bg-color:$red);
 }

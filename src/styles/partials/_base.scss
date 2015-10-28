@@ -1,47 +1,8 @@
 $blue:#034EC9;
 $red:#EF4123;
 $total-patterns:6;
+//TODO add dynamic generation of patterns based on number and buttons based on colors
 
-//TODO needs to be extended for use in (non interactive) textboxes and buttons
-@mixin color-bg-theme($bg-color:white,
-$foreground-color:white) {
-    background-color: $bg-color;
-    border-color: $foreground-color;
-    border: .1em;
-    border-style:solid;
-    //TEXT COLOR
-    color: $foreground-color;
-    text: {
-        transform: uppercase;
-        decoration: none;
-    }
-}
 
-@mixin add-button-styles($bg-color:white,
-$foreground-color:white) {
-    &:hover {
-        background-color: $foreground-color;
-        border-color: $bg-color;
-        color: $bg-color;
-        cursor:pointer;
-    }
-    &:active {
-        background-color: $bg-color;
-        border-color: $foreground-color;
-        color: $foreground-color;
-    }
-    &:focus {
-        box-shadow: none;
-        outline: none;
-    }
-}
 
-//creates patterns when passed a number
-@mixin return-pattern($number) {
-    background: url(return-pattern-url($number));
-}
 
-// return the pattern of this number
-@function return-pattern-url($value) {
-    @return '../assets/images/pattern-'+$value+'.svg'
-}

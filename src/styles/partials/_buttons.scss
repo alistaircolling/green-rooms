@@ -1,3 +1,23 @@
+@mixin add-button-styles($bg-color:white,
+$foreground-color:white) {
+        cursor:pointer;
+    &:hover {
+        background-color: $foreground-color;
+        border-color: $bg-color;
+        color: $bg-color;
+    }
+    &:active {
+        background-color: $bg-color;
+        border-color: $foreground-color;
+        color: $foreground-color;
+    }
+    &:focus {
+        box-shadow: none;
+        outline: none;
+    }
+}
+
+
 .blue-button{
     @include color-bg-theme($foreground-color:$blue);
     @include add-button-styles($foreground-color:$blue);
