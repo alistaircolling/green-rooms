@@ -67,7 +67,7 @@ gulp.task('copy-svgs', function() {
 });
 
 gulp.task('styles', function() {
-    return gulp.src(['src/styles/*.scss'])
+    return gulp.src(['src/styles/main.scss'])
         .pipe(plumber({
             errorHandler: function(error) {
                 console.log(error.message);
