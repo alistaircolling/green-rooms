@@ -1,23 +1,34 @@
 @font-face {
-  font-family: Pitch;
-  src: url("../assets/fonts/Pitch-Regular.otf");
+    font-family: Pitch;
+    font-weight: normal;
+    src: url("../assets/fonts/Pitch-Regular.otf");
 }
-
 @font-face {
-  font-family: Pitch;
-  font-weight: lighter;
-  src: url("../assets/fonts/Pitch-Light.otf");
+    font-family: Pitch;
+    font-weight: lighter;
+    src: url("../assets/fonts/Pitch-Light.otf");
 }
-
-
-
 * {
-  font-family: Pitch;
-  font-weight: lighter;
+    font-family: Pitch;
+    font-weight: lighter;
+}
+.h1 {
+    line-height: 1em;
+    font-weight: lighter;
+}
+//replicates the spacing in the logo design
+.logo-text {
+    font-family: Pitch;
+    font-weight: 900;
+    font-size:2.5em;
+    color: $blue;
+    line-height:1.2em;
+    letter-spacing:.22em;
 }
 
-.h1 {
-  line-height: 1em;
-  font-weight: lighter;
-}
+
+
+
+
+
 
