@@ -125,7 +125,8 @@ gulp.task('clean', function() {
 });
 
 gulp.task('watch', function() {
-    gulp.watch("src/styles/*.scss", ['styles']);
+    //gulp.watch("src/styles/*.scss", ['sass']);
+    gulp.watch("src/styles/**/*.scss", ['sass']);
     gulp.watch("src/js/*.js", ['scripts']);
     gulp.watch("src/*.html", ['html']);
     gulp.watch("src/assets/images/*.jpg", ['images']);
@@ -189,7 +190,16 @@ gulp.task('sass', function() {
             'last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'
         ))
         // Funally put the compiled sass into a css file
-        .pipe(gulp.dest(paths.styles.dest));
+        .pipe(gulp.dest(paths.styles.dest))
+
+    .pipe(
+        browserSync.reload({
+            stream: true
+        })
+    );
+
+
+
 });
 
 
