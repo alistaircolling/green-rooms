@@ -1,27 +1,7 @@
-@font-face {
-  font-family: Pitch;
-  src: url("../assets/fonts/Pitch-Regular.otf");
-}
-
-@font-face {
-  font-family: Pitch;
-  font-weight: lighter;
-  src: url("../assets/fonts/Pitch-Light.otf");
-}
-
 $blue: #034EC9;
 $red: #EF4123;
 
-* {
-  font-family: Pitch;
-  font-weight: lighter;
-}
-
-.h1 {
-  line-height: 1em;
-  font-weight: lighter;
-}
-
+//TODO needs to be extended for use in (non interactive) textboxes and buttons
 @mixin color-bg-theme($bg-color:white, $foreground-color:white){
   background-color: $bg-color;
   border-color: $foreground-color;
@@ -31,7 +11,7 @@ $red: #EF4123;
       transform: uppercase;
       decoration:none;
 }
-   &:hover{
+  &:hover{
       background-color:$foreground-color;
       border-color:$bg-color;
       color:$bg-color;
@@ -44,59 +24,5 @@ $red: #EF4123;
    &:focus{
       box-shadow:none;
    }    
-}
-.red-bg{
-    @include color-bg-theme($bg-color:$red);
-}
-.blue-bg{
-    @include color-bg-theme($bg-color:$blue);
-}
-.black-bg{
-    @include color-bg-theme($bg-color:black);
-}
-.red-foreground{
-    @include color-bg-theme($foreground-color:$red);
-}
-.blue-foreground{
-    @include color-bg-theme($foreground-color:$blue);
-}
-.black-foreground{
-    @include color-bg-theme($foreground-color:black);
-}
-
-
-
-.menu-button {
-    background: url('../assets/images/blue-ball-pattern.jpg') no-repeat;
-}
-.menu-bar{
-    background: url('../assets/images/blue-ball-pattern.jpg') no-repeat;
-}
-.pattern-bg-1{
-    background: url('../assets/images/pattern-1.svg');
-}
-.pattern-bg-2{
-    background: url('../assets/images/pattern-2.svg');
-}
-.pattern-bg-3{
-    background: url('../assets/images/pattern-3.svg');
-}
-.pattern-bg-4{
-    background: url('../assets/images/pattern-4.svg');
-}
-.pattern-bg-5{
-    background: url('../assets/images/pattern-5.svg');
-}
-.pattern-bg-6{
-    background: url('../assets/images/pattern-6.svg');
-}
-.pattern-bg-7{
-    background: url('../assets/images/pattern-7.svg');
-}
-.pattern-bg-8{
-    background: url('../assets/images/pattern-8.svg');
-}
-.pattern-bg-9{
-    background: url('../assets/images/pattern-9.svg');
 }
 

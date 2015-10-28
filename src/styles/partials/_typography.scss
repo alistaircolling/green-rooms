@@ -1,0 +1,23 @@
+@font-face {
+  font-family: Pitch;
+  src: url("../assets/fonts/Pitch-Regular.otf");
+}
+
+@font-face {
+  font-family: Pitch;
+  font-weight: lighter;
+  src: url("../assets/fonts/Pitch-Light.otf");
+}
+
+
+
+* {
+  font-family: Pitch;
+  font-weight: lighter;
+}
+
+.h1 {
+  line-height: 1em;
+  font-weight: lighter;
+}
+

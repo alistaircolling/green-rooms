@@ -195,6 +195,6 @@ gulp.task('sass', function() {
 
 gulp.task('default', function(callback) {
     //wait until clean has finished before running other tasks in paralell
-    runSequence('clean', ['styles', 'scripts', 'html', 'images', 'copy-yml', 'copy-svgs', 'fonts', 'browser-sync', 'watch'],
+    runSequence('clean', ['sass', 'scripts', 'html', 'images', 'copy-yml', 'copy-svgs', 'fonts', 'browser-sync', 'watch'],
         callback);
 });
