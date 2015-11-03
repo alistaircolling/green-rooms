@@ -15,6 +15,7 @@ function mobileCheck() {
 var routerApp = angular.module('routerApp', ['ui.router']);
 
 routerApp.config(function($stateProvider, $urlRouterProvider) {
+
     var isMobile = (function() {
         var check = false;
         (function(a) {
@@ -22,40 +23,56 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
         })(navigator.userAgent || navigator.vendor || window.opera);
         return check;
     })();
-    $urlRouterProvider.otherwise('/home');
+
+    $urlRouterProvider.otherwise('/-home');
     // add states to the state provider
     $stateProvider
     //HOME =================================   
-        .state('home', {
-            url: '/home',
-            templateUrl: 'partial-home.html',
+        .state('-home', {
+            url: '/-home',
+            //templateUrl: 'partial-home.html',
             controller: function($scope, $state) {
                 console.log("home controller");
                 if (isMobile) {
-                    console.log("isMobile");
-                    $state.go('beds');
+                    $state.go('home-mobile');
+                    console.log("is mobile");
                 } else {
-                    console.log("isnotMobile");
+                    console.log("is desktop");
+                    $state.go('home');
                 }
             }
+        })
+        .state('home-mobile', {
+            url: '/m-home',
+            templateUrl: 'partial-home-mobile.html',
+            controller:'mobile-controller' 
+        })
+     
+        .state('home', {
 
+            url: '/home',
+            templateUrl: 'partial-home.html',
+            controller:'home-controller' 
         })
-        //BEDS ==================================   
-        .state('beds', {
-            url: '/beds',
-            views: {
-                '': {
-                    templateUrl: 'partial-beds.html'
-                },
-                'prices-intro@beds': {
-                    template: 'All rooms come with tea and coffee making facilities'
-                },
-                'prices@beds': {
-                    templateUrl: 'table-data.html',
-                    controller: 'pricesController'
-                }
+
+
+    //BEDS ==================================   
+    
+    .state('beds', {
+        url: '/beds',
+        views: {
+            '': {
+                templateUrl: 'partial-beds.html'
+            },
+            'prices-intro@beds': {
+                template: 'All rooms come with tea and coffee making facilities'
+            },
+            'prices@beds': {
+                templateUrl: 'table-data.html',
+                controller: 'pricesController'
             }
-        })
+        }
+    })
 
     //LOCATION    ===========
     .state('location', {
@@ -81,38 +98,4 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
         }
 
     });
-    // Magic sauce, imediate so the value is stored and we don't need to lookup every check
-
-
-    /*  if (isMobile) {*/
-    //$stateProvider.state.go('about');
-    //} else {
-    //$stateProvider.state.go('beds');
-    /*}*/
-
 });
-//routerApp.controller('Controller', ['$scope', '$state',
-//function($scope, $state) {
-//$state.go('beds');
-//}
-//]);
-//$scope.changestate = function() {
-//$state.go('beds');
-//};
-/*});*/
-////////////////////// mobile check
-/*routerApp.run(function($rootScope, $location) { // LISTEN FOR STATE CHANGES*/
-//$rootScope.$on('$stateChangeStart',
-//function(event, toState, toParams, fromState, fromParams) {
-//console.log("
-//STATE: " + toState.name); // do something
-//switch (toState.name) {
-//case 'home':
-//$rootScope.state = toState.name;
-//break
-//default:
-
-
-//}
-//});
-/*});*/
