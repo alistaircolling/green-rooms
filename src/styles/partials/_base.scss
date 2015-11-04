@@ -1,8 +1,24 @@
 $blue:#034EC9;
-$red:#EF4123;
-$total-patterns:6;
+ $red:#EF4123;
+ $total-patterns:6;
 //TODO add dynamic generation of patterns based on number and buttons based on colors
-
-
-
-
+//MENU STUFF
+.float-wrap {
+    /* 816 = <number of floats> * (<float width> + 2 * <float border width>) */
+    border: 1px solid;
+    /* causes .vertical-scroll's height to match its child divs' */
+    overflow: auto;
+}
+.left-floater {
+    border: 1px solid;
+    float: left;
+}
+.outer {
+    overflow-x: scroll
+}
+.menu-buttons-container {
+    display: inline-block;
+  /*  border: thick dotted #060;
+    margin: 0px auto 10px auto;
+    text-align: left;*/
+}
