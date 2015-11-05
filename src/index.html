@@ -51,28 +51,35 @@
 
 <!-- apply our angular app to our site -->
 
-<body ng-app="routerApp" style="" autoscroll="false">
+<body ng-app="routerApp" style="" autoscroll="false" class="">
     <!--<div id="bg">-->
     <!--<img src="assets/images/bw-green-room.jpg" alt="">-->
     <!--</div>-->
-    <div class="border bg-green clearfix center" >
-        <div class="menu-buttons-container mt1" >
-            <button ui-sref="home" class="menu-text blue-button m1 left-floater">HOME</button>
+    <div class="bg-white ">
+    <div class="clearfix center ">
+
+        <div class="menu-buttons-container mt1">
+            <button ui-sref="home" class="menu-text black-button m1 left-floater">HOME</button>
             <button ui-sref="beds" class="menu-text black-button m1 left-floater">beds</button>
-            <button ui-sref="about" class="menu-text red-button m1 left-floater">about</button>
-            <button ui-sref="about" class="menu-text red-button m1 left-floater">gallery</button>
-           
+            <button ui-sref="about" class="menu-text black-button m1 left-floater">about</button>
+            <button ui-sref="about" class="menu-text black-button m1 left-floater">gallery</button>
+
         </div>
     </div>
-    <!---    NAV ---- FIXED --->
-    <div id="page-wrap" style="z-index:0; max-height:60vh">
-
-        <div ui-view autoscroll="false"></div>
     </div>
 
-    <!-- At bottom, 'cause it's not really content -->
-    <div id="bg" style="z-index:-1;visibility:visible;background-size:cover" class="pattern-bg-6">
-        <img src="assets/images/bw-green-room.jpg" alt="">
+    <div class="flex flex-center" style="min-height:80vh">
+        <!---    NAV ---- FIXED --->
+        <div id="page-wrap" style="z-index:0;" class="center mx-auto">
+
+            <div ui-view autoscroll="false"></div>
+        </div>
+
+        <!-- At bottom, 'cause it's not really content -->
+        <div id="bg" style="z-index:-1;visibility:visible;background-size:cover" class="pattern-bg-6">
+            <img src="assets/images/bw-green-room.jpg" alt="" class="pt2">
+        </div>
     </div>
 </body>
+
 </html>

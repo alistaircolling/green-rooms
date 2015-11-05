@@ -34,8 +34,8 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
             controller: function($scope, $state) {
                 console.log("home controller");
                 if (isMobile) {
-                    $state.go('home-mobile');
                     console.log("is mobile");
+                    $state.go('home-mobile');
                 } else {
                     console.log("is desktop");
                     $state.go('home');
@@ -45,7 +45,7 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
         .state('home-mobile', {
             url: '/m-home',
             templateUrl: 'partial-home-mobile.html',
-            controller:'mobile-controller' 
+            controller:'mobile-home-controller' 
         })
      
         .state('home', {
