@@ -1,3 +1,4 @@
+//TODO make sure that all tasks complete before launching browsersync
 var gulp = require('gulp'),
     plumber = require('gulp-plumber'),
     rename = require('gulp-rename'),

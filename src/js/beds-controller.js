@@ -1,6 +1,5 @@
-
-console.log('beds controller loaded');
-routerApp.controller('bedsController', function($scope) {
+console.log('beds controller loaded!');
+routerApp.controller('BedsController', function($scope) {
 
     $scope.message = 'test';
 
@@ -14,4 +13,5 @@ routerApp.controller('bedsController', function($scope) {
         name: 'Presidential',
         price: 50000000
     }];
+
 });
