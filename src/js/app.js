@@ -52,6 +52,7 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
         url: '/home',
         templateUrl: 'partial-home.html',
         controller: 'home-controller'
+        //TODO update names of controllers to be TitleCase
     })
 
 
@@ -62,7 +63,7 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
         views: {
             '': {
                 templateUrl: 'partial-beds.html',
-                controller: 'beds-controller'
+                controller: 'BedsController'
             },
             'prices-intro@beds': {
                 template: 'All rooms come with tea and coffee making facilities'

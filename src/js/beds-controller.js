@@ -1,5 +1,5 @@
 console.log('beds controller loaded!');
-routerApp.controller('beds-controller', function($scope) {
+routerApp.controller('BedsController', function($scope) {
 
     $scope.message = 'test';
 
@@ -13,9 +13,5 @@ routerApp.controller('beds-controller', function($scope) {
         name: 'Presidential',
         price: 50000000
     }];
-
-    $scope.isMobileMenu = function() {
-        return "mobile-menu";
-    };
 
 });
