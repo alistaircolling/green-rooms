@@ -18,15 +18,15 @@ $foreground-color:white) {
 }
 
 
-.blue-button{
+@mixin blue-button(){
     @include color-bg-theme($foreground-color:$blue);
     @include add-button-styles($foreground-color:$blue);
 }
-.red-button{
+@mixin red-button(){
     @include color-bg-theme($foreground-color:$red);
     @include add-button-styles($foreground-color:$red);
 }
-.black-button{
+@mixin black-button(){
     @include color-bg-theme($foreground-color:black);
     @include add-button-styles($foreground-color:black);
 }

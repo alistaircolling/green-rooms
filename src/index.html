@@ -52,34 +52,29 @@
 <!-- apply our angular app to our site -->
 
 <body ng-app="routerApp" style="" autoscroll="false" class="">
-    <!--<div id="bg">-->
-    <!--<img src="assets/images/bw-green-room.jpg" alt="">-->
-    <!--</div>-->
-    <div class="bg-white" ng-controller="MenuController" ng-class="isMobileMenu()">
-        <div class="clearfix center">
 
-            <div class="buttons-container">
-                <button ui-sref="home" class="menu-text black-button m1">home</button>
-                <button ui-sref="beds" class="menu-text black-button m1">beds</button>
-                <button ui-sref="about" class="menu-text black-button m1">about</button>
-                <button ui-sref="about" class="menu-text black-button m1">gallery</button>
-
-
-               
-
+    <div class="" ng-controller="MenuController" ng-class="isMobileMenu()">
+        <div class="backgroun">
+            <div class="button-wrapper">
+                <div class="buttons-container">
+                    <button ui-sref="home" class="">home</button>
+                    <button ui-sref="beds" class="">beds</button>
+                    <button ui-sref="about" class="">about</button>
+                    <button ui-sref="about" class="">gallery</button>
+                </div>
             </div>
         </div>
     </div>
 
     <div class="flex flex-center" style="min-height:80vh">
-        <!---    NAV ---- FIXED --->
+        <!---    NAV ---- FIXED -->
         <div id="page-wrap" style="z-index:0;" class="center mx-auto">
-
             <div ui-view autoscroll="false"></div>
         </div>
 
         <!-- At bottom, 'cause it's not really content -->
-        <div id="bg" style="z-index:-1;visibility:visible;background-size:cover;background-image:url('assets/images/bw-green-room.jpg');">
+        <div id="bg" style="z-index:-1;visibility:visible;
+        background-size:cover;background-image:url('assets/images/bw-green-room.jpg');">
         </div>
     </div>
 </body>

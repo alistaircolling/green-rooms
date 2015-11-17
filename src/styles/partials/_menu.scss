@@ -4,19 +4,30 @@
 }
 .mobile-menu {
     background-color: red;
+    button {
+        @include menu-text();
+        background-color: yellow;
+        font-size: 3em;
+        font-weight: normal;
+        margin: .5em;
+    }
 }
 .desktop-menu {
-    background-color: green;
-    button {
-        background-color: blue;
-        @include left-floater();
-    }
-    .buttons-container{
-        background-color: black;
-
-
-        border: thick dotted;
+    .buttons-container {
         @include menu-buttons-container();
     }
+    .button-wrapper {
+        text-align: center;
+        @include pattern-bg-1();
+        background-color: red;
+    }
+    button {
+        background-color: red;
+        @include menu-text();
+        @include left-floater();
+        margin: .7em;
+        margin-left: 1em;
+        margin-right: 1em;
+        text-transform: uppercase;
+    }
 }
-

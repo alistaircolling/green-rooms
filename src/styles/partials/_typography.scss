@@ -30,16 +30,17 @@
     border-style: solid;
     border-width: .08em;
 }
-.menu-text {
+@mixin menu-text() {
     font-family: Pitch;
     font-weight: 900;
-    font-size: 1.5em;
+    font-size: 1.0em;
     line-height: 1.2em;
     letter-spacing: .23em;
     //ALWAYS has a box around it !!
-    padding: .53em .62em .57em .8em;
+    padding: .4em 2em .4em 2em;
     border-style: solid;
     border-width: .08em;
+    text-transform: uppercase;
 }
 //colors to be added as classes
 .blue {
