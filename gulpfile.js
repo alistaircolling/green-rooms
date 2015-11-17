@@ -84,7 +84,7 @@ gulp.task('styles', function() {
 });
 
 gulp.task('scripts', function() {
-    return gulp.src('src/js/*.js')
+    return gulp.src('src/js/**/*.js')
         .pipe(plumber({
             errorHandler: function(error) {
                 console.log(error.message);
@@ -206,6 +206,7 @@ gulp.task('sass', function() {
 
 gulp.task('default', function(callback) {
     //wait until clean has finished before running other tasks in paralell
-    runSequence('clean', ['sass', 'scripts', 'html', 'images', 'copy-yml', 'copy-svgs', 'fonts', 'browser-sync', 'watch'],
+    runSequence('clean', ['sass', 'scripts', 'html', 'images', 'copy-yml', 
+    'copy-svgs', 'fonts'],'browser-sync', 'watch',
         callback);
 });

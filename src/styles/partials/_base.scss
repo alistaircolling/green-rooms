@@ -9,18 +9,14 @@ $blue:#034EC9;
     /* causes .vertical-scroll's height to match its child divs' */
     overflow: auto;
 }
-.left-floater {
+@mixin left-floater() {
     border: 1px solid;
     float: left;
+    color:white;
 }
 .outer {
     overflow-x: scroll
 }
-.menu-buttons-container {
-    display: inline-block;
-    overflow-x: scroll;
- /*   [>  border: thick dotted #060;*/
-    /*margin: 0px auto 10px auto;*/
-    /*text-align: left;*/
-}
+
+
 

@@ -1,6 +1,22 @@
+@mixin menu-buttons-container() {
+    display: inline-block;
+    overflow-x: scroll;
+}
 .mobile-menu {
     background-color: red;
 }
 .desktop-menu {
     background-color: green;
+    button {
+        background-color: blue;
+        @include left-floater();
+    }
+    .buttons-container{
+        background-color: black;
+
+
+        border: thick dotted;
+        @include menu-buttons-container();
+    }
 }
+
