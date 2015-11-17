@@ -14,18 +14,25 @@
 }
 .desktop-menu {
     .pattern-wrapper {
-        @include pattern-bg-1();
+        @include pattern-bg-3();
         text-align: center;
         background-color: white;
-        background-size: 10em;
+        background-size: 20em;
+        border: solid,;
+        border-color:$red;
+        border-top: 0em;
+        border-left: 0em;
+        border-right: 0em;
+        border-bottom: solid, .5em;
     }
     .buttons-container {
         @include menu-buttons-container();
     }
     button {
-        background-color: red;
+        @include blue-foreground();
         @include menu-text();
         @include left-floater();
+        color:$blue;
         margin: .7em;
         margin-left: 1em;
         margin-right: 1em;

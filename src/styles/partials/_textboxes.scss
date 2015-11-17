@@ -21,13 +21,13 @@ $foreground-color:white) {
 .black-bg{
     @include color-bg-theme($bg-color:black);
 }
-.red-foreground{
+@mixin red-foreground(){
     @include color-bg-theme($foreground-color:$red);
 }
-.blue-foreground{
+@mixin blue-foreground(){
     @include color-bg-theme($foreground-color:$blue);
 }
-.black-foreground{
+@mixin black-foreground(){
     @include color-bg-theme($foreground-color:black);
 }
 
