@@ -3,7 +3,7 @@
     overflow-x: scroll;
 }
 .mobile-menu {
-    background-color: red;
+    background-color: white;
     button {
         @include menu-text();
         background-color: yellow;
@@ -13,13 +13,14 @@
     }
 }
 .desktop-menu {
+    .pattern-wrapper {
+        @include pattern-bg-1();
+        text-align: center;
+        background-color: white;
+        background-size: 10em;
+    }
     .buttons-container {
         @include menu-buttons-container();
-    }
-    .button-wrapper {
-        text-align: center;
-        @include pattern-bg-1();
-        background-color: red;
     }
     button {
         background-color: red;

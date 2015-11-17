@@ -10,6 +10,7 @@
 
 @mixin pattern-bg-1() {
     @include return-pattern(1);
+
 }
 .pattern-bg-2 {
     @include return-pattern(2);
