@@ -3,11 +3,7 @@
 
 console.log('log test--------------------------------');
 
-
-
-
 var routerApp = angular.module('routerApp', ['ui.router']);
-
 
 routerApp.config(function($stateProvider, $urlRouterProvider) {
 
