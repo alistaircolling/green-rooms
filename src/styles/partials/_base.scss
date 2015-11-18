@@ -1,6 +1,10 @@
 $blue:#034EC9;
- $red:#EF4123;
- $total-patterns:6;
+$red:#EF4123;
+$total-patterns:6;
+
+//List used to generate classes
+$colors: "red" #EF4123,blue #034EC9;
+
 //TODO add dynamic generation of patterns based on number and buttons based on colors
 //MENU STUFF
 .float-wrap {
@@ -10,7 +14,7 @@ $blue:#034EC9;
     overflow: auto;
 }
 @mixin left-floater() {
-    border: 1px solid;
+    border: .1em solid;
     float: left;
     color:white;
 }

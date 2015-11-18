@@ -29,13 +29,13 @@
         @include menu-buttons-container();
     }
     button {
-        @include blue-foreground();
+        /*@include blue-foreground;*/
         @include menu-text();
         @include left-floater();
         color:$blue;
         margin: .7em;
-        margin-left: 1em;
-        margin-right: 1em;
+        margin-left: .5em;
+        margin-right: .5em;
         text-transform: uppercase;
     }
 }

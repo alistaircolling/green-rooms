@@ -3,7 +3,7 @@ $foreground-color:white) {
     background-color: $bg-color;
     border-color: $foreground-color;
     border: .1em;
-    border-style:solid;
+    border-style: solid;
     //TEXT COLOR
     color: $foreground-color;
     text: {
@@ -11,26 +11,51 @@ $foreground-color:white) {
         decoration: none;
     }
 }
-
-.red-bg{
-    @include color-bg-theme($bg-color:$red);
+.h2-box {
+    font-size: 1.5em;
+    display: inline-block;
+    text-align: center;
+    margin:1em 0 1em 0;
 }
-.blue-bg{
-    @include color-bg-theme($bg-color:$blue);
+.h2-box-blue-bg {
+    @extend .h2-box;
+    @include color-bg-theme($bg-color: $blue);
 }
-.black-bg{
-    @include color-bg-theme($bg-color:black);
+.h2-box-red-bg {
+    @extend .h2-box;
+    @include color-bg-theme($bg-color: $red);
 }
-@mixin red-foreground(){
-    @include color-bg-theme($foreground-color:$red);
+.h2-box-black-bg {
+    @extend .h2-box;
+    @include color-bg-theme($bg-color: black);
 }
-@mixin blue-foreground(){
-    @include color-bg-theme($foreground-color:$blue);
+.h2-box-blue {
+    @extend .h2-box;
+    @include color-bg-theme($foreground-color: $blue);
 }
-@mixin black-foreground(){
-    @include color-bg-theme($foreground-color:black);
+.h2-box-red {
+    @extend .h2-box;
+    @include color-bg-theme($foreground-color: $red);
 }
-
-
-
-
+.h2-box-black {
+    @extend .h2-box;
+    @include color-bg-theme($foreground-color: black);
+}
+.red-bg {
+    @include color-bg-theme($bg-color: $red);
+}
+.blue-bg {
+    @include color-bg-theme($bg-color: $blue);
+}
+.black-bg {
+    @include color-bg-theme($bg-color: black);
+}
+.red-foreground {
+    @include color-bg-theme($foreground-color: $red);
+}
+.blue-foreground {
+    @include color-bg-theme($foreground-color: $blue);
+}
+.black-foreground {
+    @include color-bg-theme($foreground-color: black);
+}
