@@ -25,10 +25,12 @@
         border-bottom: solid, .5em;
     }
     .buttons-container {
+        text-align: center;
         @include menu-buttons-container();
         position: relative;
         top: 2em;
-        margin-left: 1em;
+        left:1em;//centers the about button on the logo rather than on the page
+        /*margin-left: 1em;*/
         /*[>display: inline;<]*/
         /*background-color: white;*/
         /*border: solid 1px green;*/
