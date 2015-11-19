@@ -18,41 +18,19 @@
     font-weight: 900;
     letter-spacing: .22em;
 }
-.logo-text-3 {
-    font-family: PitchLight;
-    font-weight: normal;
-    font-size: 8em;
-}
-.logo-text-4 {
-    font-family: Pitch;
-    font-weight: lighter;
-    font-size: 8em;
-}
-//replicates the spacing in the logo design
-.logo-text-1 {
-    font-family: Pitch;
-    font-weight: lighter;
-    font-size: 2.5em;
-    line-height: 1.2em;
-    letter-spacing: .23em;
-    //ALWAYS has a box around it !!
-    padding: .53em .62em .57em .8em;
-    border-style: solid;
-    border-width: .08em;
-}
-.logo-text-2 {
-    font-family: Pitch;
-    font-size: 2.5em;
-    line-height: 1.2em;
-    letter-spacing: .23em;
-    //ALWAYS has a box around it !!
-    padding: .53em .62em .57em .8em;
-    border-style: solid;
-    border-width: .08em;
-}
 .logo-text {
     font-family: Pitch;
     font-size: 2.5em;
+    line-height: 1.2em;
+    letter-spacing: .23em;
+    //ALWAYS has a box around it !!
+    padding: .53em .62em .57em .8em;
+    border-style: solid;
+    border-width: .08em;
+}
+.logo-text-mobile {
+    font-family: Pitch;
+    font-size: 5em;
     line-height: 1.2em;
     letter-spacing: .23em;
     //ALWAYS has a box around it !!

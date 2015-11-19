@@ -3,14 +3,7 @@
     overflow-x: scroll;
 }
 .mobile-menu {
-    background-color: white;
-    button {
-        @include menu-text();
-        background-color: yellow;
-        font-size: 3em;
-        font-weight: normal;
-        margin: .5em;
-    }
+    visibility: hidden;
 }
 .desktop-menu {
     .pattern-wrapper {
@@ -29,7 +22,7 @@
         @include menu-buttons-container();
         position: relative;
         top: 2em;
-        left:1em;//centers the about button on the logo rather than on the page
+        left: 1em;//centers the about button on the logo rather than on the page
         /*margin-left: 1em;*/
         /*[>display: inline;<]*/
         /*background-color: white;*/
