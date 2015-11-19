@@ -14,12 +14,11 @@
 }
 .desktop-menu {
     .pattern-wrapper {
-        @include pattern-bg-3();
         text-align: center;
         background-color: white;
         background-size: 20em;
-        border: solid,;
-        border-color:$red;
+        border: solid, ;
+        border-color: $red;
         border-top: 0em;
         border-left: 0em;
         border-right: 0em;
@@ -27,15 +26,24 @@
     }
     .buttons-container {
         @include menu-buttons-container();
+        position: relative;
+        top: 2em;
+        margin-left: 1em;
+        /*[>display: inline;<]*/
+        /*background-color: white;*/
+        /*border: solid 1px green;*/
     }
     button {
         /*@include blue-foreground;*/
         @include menu-text();
         @include left-floater();
-        color:$blue;
-        margin: .7em;
+        color: $blue;
+        background-color: white;
+        /*margin: .7em;*/
         margin-left: .5em;
         margin-right: .5em;
         text-transform: uppercase;
+        border: solid;
+        /*border-width: .1em;*/
     }
 }

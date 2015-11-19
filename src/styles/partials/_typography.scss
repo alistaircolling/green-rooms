@@ -62,11 +62,11 @@
 }
 @mixin menu-text() {
     font-family: Pitch;
-    font-size: 1.8em;
+    font-size: 2em;
     line-height: 1.2em;
     letter-spacing: .23em;
     //ALWAYS has a box around it !!
-    padding: .4em 1em .4em 1em;
+    padding: .2em .5em .2em .5em;
     border-style: solid;
     border-width: 1em;
     text-transform: uppercase;

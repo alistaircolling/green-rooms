@@ -2,15 +2,12 @@
 @mixin return-pattern($number) {
     background: url(return-pattern-url($number));
 }
-
 // return the pattern of this number
 @function return-pattern-url($value) {
     @return '../assets/images/pattern-'+$value+'.svg'
 }
-
 @mixin pattern-bg-1() {
     @include return-pattern(1);
-
 }
 @mixin pattern-bg-2() {
     @include return-pattern(2);
@@ -36,4 +33,30 @@
 @mixin pattern-bg-9() {
     @include return-pattern(9);
 }
-
+.pattern1 {
+    @include pattern-bg-1;
+}
+.pattern2 {
+    @include pattern-bg-2;
+}
+.pattern3 {
+    @include pattern-bg-3;
+}
+.pattern4 {
+    @include pattern-bg-4;
+}
+.pattern5 {
+    @include pattern-bg-5;
+}
+.pattern6 {
+    @include pattern-bg-6;
+}
+.pattern7 {
+    @include pattern-bg-7;
+}
+.pattern8 {
+    @include pattern-bg-8;
+}
+.pattern9 {
+    @include pattern-bg-9;
+}

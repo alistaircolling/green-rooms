@@ -56,6 +56,16 @@ gulp.task('copy-yml', function() {
         }))
         .pipe(gulp.dest('dist/'));
 });
+//TODO - figure out how bower libs are meant to be copied across
+gulp.task('copy-bower', function() {
+    return gulp.src('bower_components/angular-deckgrid/angular-deckgrid.js').pipe(plumber({
+            errorHandler: function(error) {
+                console.log(error.message);
+                this.emit('end');
+            }
+        }))
+        .pipe(gulp.dest('dist/js/'));
+});
 
 gulp.task('copy-svgs', function() {
     return gulp.src('src/assets/images/*.svg').pipe(plumber({
@@ -206,7 +216,8 @@ gulp.task('sass', function() {
 
 gulp.task('default', function(callback) {
     //wait until clean has finished before running other tasks in paralell
-    runSequence('clean', ['sass', 'scripts', 'html', 'images', 'copy-yml', 
-    'copy-svgs', 'fonts'],'browser-sync', 'watch',
+    runSequence('clean', ['sass', 'scripts', 'html', 'images', 'copy-yml',
+            'copy-svgs', 'fonts', 'copy-bower'
+        ], 'browser-sync', 'watch',
         callback);
 });
