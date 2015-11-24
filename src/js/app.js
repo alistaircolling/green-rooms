@@ -27,7 +27,7 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
         })
         .state('home-mobile', {
             url: '/m-home',
-            templateUrl: 'partial-home-mobile.html',
+            templateUrl: 'partial-home-mobile2.html',
             controller: 'mobile-home-controller'
         })
 

@@ -17,8 +17,9 @@ $foreground-color:white) {
     }
 }
 .mobile-button{
-   font-size: 4em; 
+   font-size: 4em;
    padding: .3em;
+   margin: 0 1em 0 1em;
 }
 
 .blue-bg-button{
@@ -46,3 +47,8 @@ $foreground-color:white) {
     @include color-bg-theme($foreground-color:black);
     @include add-button-styles($foreground-color:black);
 }
+.mobile-parent{height:70vh;
+width:100%;background:#ddd;display:table;
+border-spacing:5px;border-collapse:separate;}
+
+.mobile-child{background-color:red;display:table-row;}
