@@ -1,6 +1,6 @@
 @mixin add-button-styles($bg-color:white,
 $foreground-color:white) {
-        cursor:pointer;
+    cursor: pointer;
     &:hover {
         background-color: $foreground-color;
         border-color: $bg-color;
@@ -16,39 +16,47 @@ $foreground-color:white) {
         outline: none;
     }
 }
-.mobile-button{
-   font-size: 4em;
-   padding: .3em;
-   margin: 0 1em 0 1em;
+.mobile-button {
+    font-size: 4em;
+    padding: .3em;
+    margin: 0 1em 0 1em;
 }
-
-.blue-bg-button{
-    @include color-bg-theme($bg-color:$blue);
-    @include add-button-styles($bg-color:$blue);
+.blue-bg-button {
+    @include color-bg-theme($bg-color: $blue);
+    @include add-button-styles($bg-color: $blue);
 }
-.red-bg-button{
-    @include color-bg-theme($bg-color:$red);
-    @include add-button-styles($bg-color:$red);
+.red-bg-button {
+    @include color-bg-theme($bg-color: $red);
+    @include add-button-styles($bg-color: $red);
 }
-.black-bg-button{
-    @include color-bg-theme($bg-color:black);
-    @include add-button-styles($bg-color:black);
+.black-bg-button {
+    @include color-bg-theme($bg-color: black);
+    @include add-button-styles($bg-color: black);
 }
-
-.blue-button{
-    @include color-bg-theme($foreground-color:$blue);
-    @include add-button-styles($foreground-color:$blue);
+.blue-button {
+    @include color-bg-theme($foreground-color: $blue);
+    @include add-button-styles($foreground-color: $blue);
 }
-.red-button{
-    @include color-bg-theme($foreground-color:$red);
-    @include add-button-styles($foreground-color:$red);
+.red-button {
+    @include color-bg-theme($foreground-color: $red);
+    @include add-button-styles($foreground-color: $red);
 }
-.black-button{
-    @include color-bg-theme($foreground-color:black);
-    @include add-button-styles($foreground-color:black);
+.black-button {
+    @include color-bg-theme($foreground-color: black);
+    @include add-button-styles($foreground-color: black);
 }
-.mobile-parent{height:70vh;
-width:100%;background:#ddd;display:table;
-border-spacing:5px;border-collapse:separate;}
-
-.mobile-child{background-color:red;display:table-row;}
+.mobile-parent {
+    height: 70vh;
+    width: 100%;
+    background: #ddd;
+    display: table;
+    border-spacing: 5px;
+    border-collapse: separate;
+}
+.mobile-child {
+    background-color: red;
+    display: table-row;
+}
+.mobile-child2 {
+    background-color: green;
+}
