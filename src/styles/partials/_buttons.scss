@@ -16,7 +16,10 @@ $foreground-color:white) {
         outline: none;
     }
 }
-
+.mobile-button{
+   font-size: 4em; 
+   padding: .3em;
+}
 
 .blue-bg-button{
     @include color-bg-theme($bg-color:$blue);

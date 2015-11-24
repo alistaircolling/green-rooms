@@ -1,6 +1,6 @@
 <!-- partial-home.html -->
 <!--//TODO feels right at about 67% zoom-->
-<div class="center" style="">
+<div class="" style="">
     <div class="flex">
         <div ui-sref="call" class="logo-text-mobile blue-bg mx-auto"> 
         <!--<div ui-sref="call" class="mx-auto logo-text px4 py3 blue-foreground">-->
@@ -8,17 +8,20 @@
         </div>
     </div>
     <div class="flex center p2">
-        <div ui-sref="call" class="btn mx-auto h1 blue-foreground">
-            +44 (0)207 600800
-        </div>
+        <!--<a ui-sref="call" class="btn mx-auto h1 blue-foreground" href="tel:07977207568">-->
+            <!--+44 (0)207 600800-->
+        <!--</a>-->
+        <a href="tel:+44207800880" class="mobile-button blue-foreground">+44 (0)207 800 880</a>
     </div>
     <div class="flex center p2">
-        <div class="btn mx-auto h1 blue-foreground">
+        <div class="mobile-button mx-auto blue-foreground">
             <a href="https://www.google.co.uk/maps/place/Wood+Green+Station/@51.598095,-0.1257689,14z/data=!4m2!3m1!1s0x48761be2437f0f49:0xe981923d6225b8df"
             title="View in Google Maps">
             13-22 STATION ROAD
             <br>LONDON N22 1RG</a>
         </div>
     </div>
+    <div class="mobile-button blue-foreground" ui-sref="beds">BEDS</div>
+    <div class="mobile-button blue-foreground" ui-sref="beds">ABOUT</div>
 </div>
 <!--  <div ui-view></div> -->

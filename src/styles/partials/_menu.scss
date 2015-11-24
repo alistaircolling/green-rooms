@@ -22,11 +22,24 @@
         @include menu-buttons-container();
         position: relative;
         top: 2em;
-        left: 1em;//centers the about button on the logo rather than on the page
+        left: .82em;//centers the about button on the logo rather than on the page
         /*margin-left: 1em;*/
         /*[>display: inline;<]*/
         /*background-color: white;*/
         /*border: solid 1px green;*/
+    }
+    a {
+        /*@include blue-foreground;*/
+        @include menu-text();
+        @include left-floater();
+        color: $blue;
+        background-color: white;
+        /*margin: .7em;*/
+        margin-left: .5em;
+        margin-right: .5em;
+        text-transform: uppercase;
+        border: solid;
+        /*border-width: .1em;*/
     }
     button {
         /*@include blue-foreground;*/
