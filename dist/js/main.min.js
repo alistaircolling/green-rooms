@@ -36,7 +36,7 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
         url: '/home',
         templateUrl: 'partial-home.html',
         controller: 'home-controller'
-        //TODO update names of controllers to be TitleCase
+            //TODO update names of controllers to be TitleCase
     })
 
 
@@ -75,9 +75,7 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
             //main template (notice blank string key)
             '': {
                 templateUrl: 'partial-about.html',
-                controller: function($scope) {
-                    // reset the scroll
-                }
+                controller: 'aboutController'
             }
 
         }
