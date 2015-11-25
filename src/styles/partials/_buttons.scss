@@ -16,11 +16,6 @@ $foreground-color:white) {
         outline: none;
     }
 }
-.mobile-button {
-    font-size: 4em;
-    padding: .3em;
-    margin: 0 1em 0 1em;
-}
 .blue-bg-button {
     @include color-bg-theme($bg-color: $blue);
     @include add-button-styles($bg-color: $blue);
@@ -46,17 +41,25 @@ $foreground-color:white) {
     @include add-button-styles($foreground-color: black);
 }
 .mobile-parent {
-    height: 70vh;
+    margin: 1em;
+    height: 60vh;
     width: 100%;
+    text-align:center;
     background: #ddd;
-    display: table;
-    border-spacing: 5px;
-    border-collapse: separate;
+    display: flex;
+    flex-direction: column;
+    vertical-align:middle;
 }
 .mobile-child {
+    display:flex;
     background-color: red;
-    display: table-row;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
 }
-.mobile-child2 {
-    background-color: green;
+.mobile-button {
+    font-size: 4em;
+    background:yellow;
+    float:left;
+    padding: .2em .4em;
 }
