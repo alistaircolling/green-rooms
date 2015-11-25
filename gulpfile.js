@@ -67,6 +67,15 @@ gulp.task('copy-bower', function() {
         .pipe(gulp.dest('dist/js/'));
 });
 
+gulp.task('copy-basscss', function() {
+    return gulp.src('src/styles/basscss.min.css').pipe(plumber({
+            errorHandler: function(error) {
+                console.log(error.message);
+                this.emit('end');
+            }
+        }))
+        .pipe(gulp.dest('dist/styles/'));
+});
 gulp.task('copy-svgs', function() {
     return gulp.src('src/assets/images/*.svg').pipe(plumber({
             errorHandler: function(error) {
@@ -91,6 +100,9 @@ gulp.task('styles', function() {
         .pipe(browserSync.reload({
             stream: true
         }));
+});
+
+gulp.task('local-sass', function(){
 });
 
 gulp.task('scripts', function() {
@@ -217,7 +229,7 @@ gulp.task('sass', function() {
 gulp.task('default', function(callback) {
     //wait until clean has finished before running other tasks in paralell
     runSequence('clean', ['sass', 'scripts', 'html', 'images', 'copy-yml',
-            'copy-svgs', 'fonts', 'copy-bower'
+            'copy-svgs', 'fonts', 'copy-bower', 'copy-basscss'
         ], 'browser-sync', 'watch',
         callback);
 });
