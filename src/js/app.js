@@ -75,7 +75,7 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
             //main template (notice blank string key)
             '': {
                 templateUrl: 'partial-about.html',
-                controller: 'aboutController'
+                controller: 'AboutController'
             }
 
         }

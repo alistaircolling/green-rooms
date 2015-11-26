@@ -47,14 +47,20 @@
     <script src="http://code.angularjs.org/1.2.13/angular.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
     <script src="js/main.min.js"></script>
-<script src="js/angular-deckgrid.js"></script>
+    <script src="js/angular-deckgrid.js"></script>
 
 </head>
 
 <!-- apply our angular app to our site -->
 
 <body ng-app="routerApp" style="" autoscroll="false" class="">
-
+    <div class="" ng-controller="HeaderController" ng-class="isMobileHeader()">
+        <div class="flex">
+            <div ui-sref="home-mobile" class="logo-text-mobile blue-bg mx-auto">
+                GREEN <br/>ROOMS
+            </div>
+        </div>
+    </div>
     <div class="" ng-controller="MenuController" ng-class="isMobileMenu()">
         <div class="background-container">
             <div class="pattern-wrapper">
