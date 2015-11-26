@@ -45,21 +45,19 @@ $foreground-color:white) {
     height: 60vh;
     width: 100%;
     text-align:center;
-    background: #ddd;
     display: flex;
     flex-direction: column;
     vertical-align:middle;
 }
 .mobile-child {
     display:flex;
-    background-color: red;
     align-items: center;
     justify-content: center;
     flex-grow: 1;
 }
-.mobile-button {
+.blue-mobile-button {
     font-size: 4em;
-    background:yellow;
     float:left;
     padding: .2em .4em;
+    @include add-button-styles($foreground-color: $blue);
 }
