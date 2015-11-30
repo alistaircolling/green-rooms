@@ -56,7 +56,8 @@
     }
 }
 .desktop-header {
-    visibility: collapse;
-    background-color:red;
-    color:red;
+    display: none;
+}
+.mobile-header {
+    display: block;
 }
