@@ -9,8 +9,10 @@
     <!--<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"> -->
 
     <!-- Load BASS CSS -->
-    <link href="http://d2v52k3cl9vedd.cloudfront.net/basscss/7.0.4/basscss.min.css"
-    rel="stylesheet">
+    <!--TODO replace live link-->
+    <!--<link href="http://d2v52k3cl9vedd.cloudfront.net/basscss/7.0.4/basscss.min.css"-->
+    <link href="styles/basscss.min.css" rel="stylesheet">
+    <!--rel="stylesheet">-->
     <link href="styles/main.css" rel="stylesheet">
     <!--<script src="//console.re/connector.js" data-channel="alialiali" id="consolerescript"></script>-->
     <style>
@@ -45,12 +47,13 @@
     <script src="http://code.angularjs.org/1.2.13/angular.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
     <script src="js/main.min.js"></script>
-
+    <script src="js/angular-deckgrid.js"></script>
 
 </head>
 
 <!-- apply our angular app to our site -->
 
+<<<<<<< HEAD
 <body ng-app="routerApp" style="" autoscroll="false">
     <!--<div id="bg">-->
     <!--<img src="assets/images/bw-green-room.jpg" alt="">-->
@@ -68,18 +71,47 @@
                     <!--</div>-->
                 <!--</div>-->
             <!--</div>-->
+=======
+<body ng-app="routerApp" style="" autoscroll="false" class="">
+    <div class="" ng-controller="HeaderController" ng-class="isMobileHeader()">
+        <div class="flex">
+            <div class="logo-text-mobile blue-bg mx-auto">
+                GREEN<br/>ROOMS
+            </div>
+>>>>>>> mobile
         </div>
     </div>
-    <!---    NAV ---- FIXED --->
-    <div id="page-wrap" style="z-index:0; max-height:60vh">
-
-        <div ui-view autoscroll="false"></div>
+    <div class="" ng-controller="MenuController" ng-class="isMobileMenu()">
+        <div class="background-container">
+            <div class="pattern-wrapper">
+                <div class="buttons-container">
+                    <a ui-sref="home" class="">home</a>
+                    <a ui-sref="about" class="">about</a>
+                    <a ui-sref="beds" class="">rooms</a>
+                </div>
+            </div>
+        </div>
     </div>
 
+<<<<<<< HEAD
     <!-- At bottom, 'cause it's not really content -->
     <div id="bg" style="z-index:-1;visibility:visible;background:url(assets/images/bw-green-room.jpg);background-size:cover;" class="">
         <!--<img src="assets/images/bw-green-room.jpg" alt="" style="background:cover">-->
+=======
+    <div class="flex flex-center" style="min-height:80vh">
+        <!---    NAV ---- FIXED -->
+        <div id="page-wrap" style="z-index:0;" class="center mx-auto">
+            <div ui-view autoscroll="false"></div>
+        </div>
+
+        <!--<div id="bg" style="z-index:-1;visibility:visible;-->
+        <!--background-size:cover;background-image:url('assets/images/bw-green-room.jpg');">-->
+        <!--</div>-->
+        <div id="bg" class="pattern9" style="z-index:-1;visibility:visible;
+        background-size:cover;"></div>
+>>>>>>> mobile
     </div>
     <!--<div style="z-index:1;background-size:cover;background:url(assets/images/bw-green-room.jpg);"/>-->
 </body>
+
 </html>

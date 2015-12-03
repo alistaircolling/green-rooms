@@ -1,0 +1,63 @@
+@mixin menu-buttons-container() {
+    display: inline-block;
+    overflow-x: scroll;
+}
+.mobile-menu {
+    visibility: hidden;
+}
+.desktop-menu {
+    .pattern-wrapper {
+        text-align: center;
+        background-color: white;
+        background-size: 20em;
+        border: solid, ;
+        border-color: $red;
+        border-top: 0em;
+        border-left: 0em;
+        border-right: 0em;
+        border-bottom: solid, .5em;
+    }
+    .buttons-container {
+        text-align: center;
+        @include menu-buttons-container();
+        position: relative;
+        top: 2em;
+        left: .82em;//centers the about button on the logo rather than on the page
+        /*margin-left: 1em;*/
+        /*[>display: inline;<]*/
+        /*background-color: white;*/
+        /*border: solid 1px green;*/
+    }
+    a {
+        /*@include blue-foreground;*/
+        @include menu-text();
+        @include left-floater();
+        color: $blue;
+        background-color: white;
+        /*margin: .7em;*/
+        margin-left: .5em;
+        margin-right: .5em;
+        text-transform: uppercase;
+        border: solid;
+        /*border-width: .1em;*/
+    }
+    button {
+        /*@include blue-foreground;*/
+        @include menu-text();
+        @include left-floater();
+        color: $blue;
+        background-color: white;
+        /*margin: .7em;*/
+        margin-left: .5em;
+        margin-right: .5em;
+        text-transform: uppercase;
+        border: solid;
+        /*border-width: .1em;*/
+    }
+}
+.desktop-header {
+    display: none;
+}
+.mobile-header {
+    display: block;
+}

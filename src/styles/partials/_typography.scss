@@ -1,16 +1,16 @@
 @font-face {
     font-family: Pitch;
-    font-weight: normal;
+    /*font-weight: normal;*/
     src: url("../assets/fonts/Pitch-Regular.otf");
 }
 @font-face {
-    font-family: Pitch;
-    font-weight: lighter;
+    font-family: PitchLight;
+    /*font-weight: lighter;*/
     src: url("../assets/fonts/Pitch-Light.otf");
 }
 * {
     font-family: Pitch;
-    font-weight: lighter;
+    font-weight: normal;
 }
 .h1 {
     line-height: 1em;
@@ -18,24 +18,43 @@
     font-weight: 900;
     letter-spacing: .22em;
 }
-//replicates the spacing in the logo design
 .logo-text {
     font-family: Pitch;
-    font-weight: 900;
     font-size: 2.5em;
     line-height: 1.2em;
     letter-spacing: .23em;
     //ALWAYS has a box around it !!
-    padding:.53em .62em .57em .8em; 
+    padding: .53em .62em .57em .8em;
     border-style: solid;
     border-width: .08em;
+}
+.logo-text-mobile {
+    font-family: Pitch;
+    font-size: 5em;
+    line-height: 1.2em;
+    letter-spacing: .23em;
+    //ALWAYS has a box around it !!
+    padding: .53em .62em .57em .8em;
+    border-style: solid;
+    border-width: .08em;
+}
+@mixin menu-text() {
+    font-family: Pitch;
+    font-size: 2em;
+    line-height: 1.2em;
+    letter-spacing: .23em;
+    //ALWAYS has a box around it !!
+    padding: .2em .5em .2em .5em;
+    border-style: solid;
+    border-width: 1em;
+    text-transform: uppercase;
 }
 //colors to be added as classes
 .blue {
     color: $blue;
-    background:white;
+    background: white;
 }
 .red {
     color: $blue;
-    background:white;
+    background: white;
 }

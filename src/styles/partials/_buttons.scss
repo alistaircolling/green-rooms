@@ -1,6 +1,6 @@
 @mixin add-button-styles($bg-color:white,
 $foreground-color:white) {
-        cursor:pointer;
+    cursor: pointer;
     &:hover {
         background-color: $foreground-color;
         border-color: $bg-color;
@@ -16,17 +16,48 @@ $foreground-color:white) {
         outline: none;
     }
 }
-
-
-.blue-button{
-    @include color-bg-theme($foreground-color:$blue);
-    @include add-button-styles($foreground-color:$blue);
+.blue-bg-button {
+    @include color-bg-theme($bg-color: $blue);
+    @include add-button-styles($bg-color: $blue);
 }
-.red-button{
-    @include color-bg-theme($foreground-color:$red);
-    @include add-button-styles($foreground-color:$red);
+.red-bg-button {
+    @include color-bg-theme($bg-color: $red);
+    @include add-button-styles($bg-color: $red);
 }
-.black-button{
-    @include color-bg-theme($foreground-color:black);
-    @include add-button-styles($foreground-color:black);
+.black-bg-button {
+    @include color-bg-theme($bg-color: black);
+    @include add-button-styles($bg-color: black);
+}
+.blue-button {
+    @include color-bg-theme($foreground-color: $blue);
+    @include add-button-styles($foreground-color: $blue);
+}
+.red-button {
+    @include color-bg-theme($foreground-color: $red);
+    @include add-button-styles($foreground-color: $red);
+}
+.black-button {
+    @include color-bg-theme($foreground-color: black);
+    @include add-button-styles($foreground-color: black);
+}
+.mobile-parent {
+    margin: 1em;
+    height: 60vh;
+    width: 100%;
+    text-align:center;
+    display: flex;
+    flex-direction: column;
+    vertical-align:middle;
+}
+.mobile-child {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+}
+.blue-mobile-button {
+    font-size: 4em;
+    float:left;
+    padding: .2em .4em;
+    @include add-button-styles($foreground-color: $blue);
 }
