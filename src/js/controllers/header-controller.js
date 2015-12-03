@@ -7,8 +7,8 @@ routerApp.controller('HeaderController', function($scope, $rootScope, DeviceServ
     $rootScope.$on('$stateChangeSuccess',
         function(event, toState, toParams, fromState, fromParams) {
             console.log("STATE CHANGE");
-            debugger;
-        })
+        });
+
 });
 
 //Mobile header needs to show when NOT on the homepage

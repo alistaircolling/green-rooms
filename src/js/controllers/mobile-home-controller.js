@@ -1,17 +1,6 @@
-
-console.log('beds controller loaded');
-routerApp.controller('mobile-home-controller', function($scope) {
-
-    $scope.message = 'test';
-
-    $scope.rooms = [{
-        name: 'Basic',
-        price: 50
-    }, {
-        name: 'En-suite',
-        price: 1000
-    }, {
-        name: 'Presidential',
-        price: 50000000
-    }];
+routerApp.controller('mobile-home-controller', function($scope, $sce) {
+    $scope.phoneNumberDisplay = '+44(0)207800880';
+    $scope.phoneNumberDial = '+44207800880';
+    //$scope.address = '<span>100 KING ROAD<br/>LONDON<br/>N10 1RT</span>';
+    $scope.address = '<p>HELLLLLLLLOOOO</p>';
 });

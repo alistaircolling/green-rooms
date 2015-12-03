@@ -5,7 +5,7 @@ console.log('log test--------------------------------');
 
 var routerApp = angular.module('routerApp', ['ui.router']);
 
-//inject device service before everything
+//create device service first
 routerApp.factory('DeviceService', function() {
     console.log("checking is mobile...");
     var check = false;
@@ -42,7 +42,7 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
         })
         .state('home-mobile', {
             url: '/m-home',
-            templateUrl: 'partial-home-mobile2.html',
+            templateUrl: 'partial-home-mobile.html',
             controller: 'mobile-home-controller'
         })
 
