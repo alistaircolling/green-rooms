@@ -6,7 +6,17 @@ routerApp.controller('HeaderController', function($scope, $rootScope, DeviceServ
     };
     $rootScope.$on('$stateChangeSuccess',
         function(event, toState, toParams, fromState, fromParams) {
-            console.log("STATE CHANGE");
+            console.log("STATE CHANGE:" + toState.name);
+            switch (toState.name) {
+                case "home-mobile":
+                    console.log("is mobile-------home");
+                    $scope.isMobileHeader = function() {
+                        return "desktop-header";
+                    };
+                    break;
+                default:
+                    console.log("is ------not mobile home");
+            }
         });
 
 });
