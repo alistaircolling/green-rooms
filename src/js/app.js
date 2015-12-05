@@ -14,11 +14,9 @@ routerApp.factory('DeviceService', function() {
     return {
         isMobile: check
     };
-
 });
 
 routerApp.config(function($stateProvider, $urlRouterProvider) {
-
     $urlRouterProvider.otherwise('/-home');
     // add states to the state provider
     $stateProvider
@@ -44,16 +42,13 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
         })
 
     .state('home', {
-
         url: '/home',
         templateUrl: 'partial-home.html',
         controller: 'home-controller'
             //TODO update names of controllers to be TitleCase
     })
 
-
     //BEDS ==================================
-
     .state('beds', {
         url: '/beds',
         views: {
@@ -71,15 +66,6 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
         }
     })
 
-    //LOCATION    ===========
-    .state('location', {
-        url: '/location',
-        templateUrl: 'partial-location.html',
-        controller: function($scope) {
-            // reset the scroll
-        }
-    })
-
     // ABOUT PAGE AND MULTIPLE NAMED VIEWS =================================
     .state('about', {
         url: '/about',
@@ -89,9 +75,8 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
                 templateUrl: 'partial-about.html',
                 controller: 'AboutController'
             }
-
         }
-
     });
+
 });//must add this service here as it is ran before the first poage renders
 

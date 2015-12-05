@@ -1,6 +1,6 @@
 @mixin add-button-styles($bg-color:white,
 $foreground-color:white) {
-    cursor: pointer;
+    cursor:pointer;
     &:hover {
         background-color: $foreground-color;
         border-color: $bg-color;
@@ -44,20 +44,26 @@ $foreground-color:white) {
     margin: 1em;
     height: 60vh;
     width: 100%;
-    text-align:center;
+    text-align: center;
     display: flex;
     flex-direction: column;
-    vertical-align:middle;
+    vertical-align: middle;
 }
 .mobile-child {
-    display:flex;
+    display: flex;
     align-items: center;
     justify-content: center;
     flex-grow: 1;
 }
+.red-email-button {
+    font-size: 1.5em;
+    float: right;
+    /*padding: .2em .4em;*/
+    @include add-button-styles($foreground-color: $red);
+}
 .blue-mobile-button {
     font-size: 4em;
-    float:left;
+    float: left;
     padding: .2em .4em;
     @include add-button-styles($foreground-color: $blue);
 }

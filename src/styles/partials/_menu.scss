@@ -52,6 +52,7 @@
         margin-right: .5em;
         text-transform: uppercase;
         border: solid;
+        @include add-button-styles($foreground-color:$blue);
         /*border-width: .1em;*/
     }
 }

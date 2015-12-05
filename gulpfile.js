@@ -149,7 +149,7 @@ gulp.task('clean', function() {
 
 gulp.task('watch', function() {
     //gulp.watch("src/styles/*.scss", ['sass']);
-    gulp.watch("src/styles/**/*.scss", ['sass']);
+    gulp.watch("src/styles/**/**/*.scss", ['sass']);
     gulp.watch("src/js/**/*.js", ['scripts']);
     gulp.watch("src/*.html", ['html']);
     gulp.watch("src/assets/images/*.jpg", ['images']);
