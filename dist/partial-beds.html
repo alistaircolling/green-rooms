@@ -4,104 +4,24 @@
         <!-- enquiry button --->
         <div>
             <div class="red-button red-email-button m3 p1">
-                <div href="mailto:who@who.com" >Email to Book</div>
+                <div href="mailto:who@who.com">Email to Book</div>
             </div>
         </div>
         <!-- bed type container -->
-        <div class="p1 m3 center">
+        <div class="p1 m3 center" ng-repeat="room in rooms">
             <!--- title and price container -->
-            <div class="clearfix">
-                <div class="h2  left-align bold">Presedential Suite</div>
-                <div class="h3  left-align p1">£50 per night</div>
+            <div class="clearfix black">
+                <div class="h2  left-align bold" ng-bind="room.name"></div>
+                <div class="h3  left-align p1" ng-bind="room.price | sanitize"></div>
             </div>
             <!--- image and description fold under when 2 small -->
-            <div class="clearfix ">
-                <div class="sm-col sm-col-6 ">
-
-                    <img src="http://d2v52k3cl9vedd.cloudfront.net/assets/images/placeholder-square.svg"
-                    />
-                </div>
-                <div class="sm-col sm-col-6  left-align p3 h4">This is the presendential suite. We have 4 of these in the building.
-                    All of them have the following:
-                    <br/>
-                    <br/>
-                    <ul>
-                        <li>24 Hour Room Service</li>
-                        <li>King size bed</li>
-                        <li>Rolltop bath</li>
-                    </ul>
-                </div>
-
-            </div>
-        </div>
-
-        <div class="p1 m3 center">
-            <!--- title and price container -->
             <div class="clearfix">
-                <div class="h2  left-align bold">Deluxe Room</div>
-                <div class="h3  left-align p1">£20 per night</div>
-            </div>
-            <!--- image and description fold under when 2 small -->
-            <div class="clearfix ">
                 <div class="sm-col sm-col-6 ">
+                    <img ng-src="{{room.image}}" />
+                </div>
+                <div class="sm-col sm-col-6  left-align p3 h4" ng-bind="room.copy"></div>
 
-                    <img src="http://d2v52k3cl9vedd.cloudfront.net/assets/images/placeholder-square.svg"
-                    />
-                </div>
-                <div class="sm-col sm-col-6  left-align p3">Spacious and light. All of these rooms include:
-                    <br/>
-                    <br/>
-                    <ul>
-                        <li>Double Bed</li>
-                        <li>Rainforest shower</li>
-                        <li>Desk / study area</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="p1 m3 center">
-            <!--- title and price container -->
-            <div class="clearfix">
-                <div class="h2  left-align bold">Dorm Bed</div>
-                <div class="h3  left-align p1">£5 per night</div>
-            </div>
-            <!--- image and description fold under when 2 small -->
-            <div class="clearfix ">
-                <div class="sm-col sm-col-6 ">
-
-                    <img src="http://d2v52k3cl9vedd.cloudfront.net/assets/images/placeholder-square.svg"
-                    />
-                </div>
-                <div class="sm-col sm-col-6  left-align p3 ">
-                    A great option if you are on a budget or travelling in a large group.
-                    <ul>
-                        <li>Individual lockers</li>
-                        <li>Power supply</li>
-                        <li>Shared bathroom</li>
-                    </ul>
-                </div>
             </div>
         </div>
     </div>
 </div>
-
-<!--<div class="bold h1 mx-auto p1">-->
-<!--Book a room-->
-<!--</div>-->
-
-<!--</div>-->
-<!--<div class="flex flex-center p1">-->
-<!--<div class="mx-auto">-->
-
-<!--<a ui-sref="prices-intro" class="h3 btn btn-primary mb4 bg-orange">What you get</a>-->
-<!--<a ui-sref="prices" class="h3 btn btn-primary mb4">View prices</a>-->
-<!--</div>-->
-<!--</div>-->
-<!--<div ui-view="prices" />-->
-<!--<div ui-view="prices-intro" />-->
-<!--<div class="clearfix">-->
-
-
-
-
-<!--</div>-->
