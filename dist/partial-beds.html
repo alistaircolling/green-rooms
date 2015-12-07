@@ -8,11 +8,11 @@
             </div>
         </div>
         <!-- bed type container -->
-        <div class="p1 m3 center" ng-repeat="room in rooms">
+        <div class="p1 m3 center black" ng-repeat="room in rooms">
             <!--- title and price container -->
             <div class="clearfix black">
-                <div class="h2  left-align bold" ng-bind="room.name"></div>
-                <div class="h3  left-align p1" ng-bind="room.price | sanitize"></div>
+                <div class="h2  left-align bold " ng-bind="room.name"></div>
+                <div class="h3  left-align p1 " ng-bind="room.price | price-per-night"></div>
             </div>
             <!--- image and description fold under when 2 small -->
             <div class="clearfix">

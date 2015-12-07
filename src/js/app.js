@@ -78,5 +78,4 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
         }
     });
 
-});//must add this service here as it is ran before the first poage renders
-
+}); //must add this service here as it is ran before the first poage renders
