@@ -11,15 +11,30 @@ $foreground-color:white) {
         decoration: none;
     }
 }
-.logo-box{
+@mixin color-box-theme($bg-color:white,
+$foreground-color:white) {
+    background-color: $bg-color;
+    border-color: $foreground-color;
+    border: .2em;
+    border-style: solid;
+    //TEXT COLOR
+    color: $foreground-color;
+}
+.logo-box {
     @extend logo-text;
-    margin:1em 0 1em 0;
+    margin: 1em 0 1em 0;
+}
+.main-box-blue {
+    @include color-box-theme($foreground-color: $blue);
+}
+.main-box-red {
+    @include color-box-theme($foreground-color: $red);
 }
 .h2-box {
     font-size: 1.5em;
     display: inline-block;
     text-align: center;
-    margin:.5em 0 .5em 0;
+    margin: .5em 0 .5em 0;
     padding: 0 .5em 0 .5em;
 }
 .h2-box-blue-bg {
