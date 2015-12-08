@@ -55,13 +55,6 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
             '': {
                 templateUrl: 'partial-beds.html',
                 controller: 'BedsController'
-            },
-            'prices-intro@beds': {
-                template: 'All rooms come with tea and coffee making facilities'
-            },
-            'prices@beds': {
-                templateUrl: 'table-data.html',
-                controller: 'pricesController'
             }
         }
     })
