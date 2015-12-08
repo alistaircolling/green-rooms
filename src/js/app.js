@@ -1,5 +1,3 @@
-console.log('log test--------------------------------');
-
 var routerApp = angular.module('routerApp', ['ui.router']);
 
 //create device service first
