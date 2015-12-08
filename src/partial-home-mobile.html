@@ -1,26 +1,28 @@
-<div class="flex">
-    <div ui-sref="call" class="logo-text-mobile blue-bg mx-auto">
-        <!--<div ui-sref="call" class="mx-auto logo-text px4 py3 blue-foreground">-->
-        GREEN<br/>ROOMS
-    </div>
-</div>
+<div class="mobile-wrapper bg-green">
+        <div class="flex">
+                <div ui-sref="call" class="logo-text-mobile blue-bg mx-auto">
+                        <!--<div ui-sref="call" class="mx-auto logo-text px4 py3 blue-foreground">-->
+                        GREEN<br/>ROOMS
+                </div>
+        </div>
 
-<div class="mobile-parent">
-    <!--<div ng-bind="phoneNumberDial" />-->
-    <div class="mobile-child">
-        <div class="blue-mobile-button blue-foreground">
-            <a ng-href="tel:{{phoneNumberDial}}" ng-bind="phoneNumberDisplay"></a>
+        <div class="mobile-parent bg-red">
+                <!--<div ng-bind="phoneNumberDial" />-->
+                <div class="mobile-child">
+                        <div class="blue-mobile-button blue-foreground">
+                                <a ng-href="tel:{{phoneNumberDial}}" ng-bind="phoneNumberDisplay"></a>
+                        </div>
+                </div>
+                <div class="mobile-child">
+                        <div class="blue-mobile-button blue-foreground" ng-bind-html="address | sanitize"></div>
+                </div>
+                <div class="mobile-child">
+                        <div class="blue-mobile-button blue-foreground" ui-sref="about"><span>ABOUT</span>
+                        </div>
+                </div>
+                <div class="mobile-child">
+                        <div class="blue-mobile-button blue-foreground" ui-sref="beds"><span>BEDS</span>
+                        </div>
+                </div>
         </div>
-    </div>
-    <div class="mobile-child">
-        <div class="blue-mobile-button blue-foreground" ng-bind-html="address | sanitize"></div>
-    </div>
-    <div class="mobile-child">
-        <div class="blue-mobile-button blue-foreground" ui-sref="about"><span>ABOUT</span>
-        </div>
-    </div>
-    <div class="mobile-child">
-        <div class="blue-mobile-button blue-foreground" ui-sref="beds"><span>BEDS</span>
-        </div>
-    </div>
 </div>
