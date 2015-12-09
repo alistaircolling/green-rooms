@@ -1,0 +1,25 @@
+{
+  "name": "green-rooms",
+  "description": "ang basscss sass",
+  "main": "gulpfile.js",
+  "authors": [
+    "Alistair Colling"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/alistaircolling/green-rooms",
+  "moduleType": [
+    "node"
+  ],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-deckgrid": "~0.5.0",
+    "angular-mailto": "~0.1.0"
+  }
+}

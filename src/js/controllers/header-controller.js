@@ -30,6 +30,11 @@ routerApp.controller('HeaderController', function($scope, $rootScope, DeviceServ
                         };
 
                 }
+            } else {
+                $scope.showHeader = function() {
+                    return "hide-header";
+                };
+
             }
         });
 
