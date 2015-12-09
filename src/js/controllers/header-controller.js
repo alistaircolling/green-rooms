@@ -19,6 +19,11 @@ routerApp.controller('HeaderController', function($scope, $rootScope, DeviceServ
                             return "show-header";
                         };
                         break;
+                    case "home-mobile":
+                        $scope.showHeader = function() {
+                            return "show-header";
+                        };
+                        break;
                     default:
                         $scope.showHeader = function() {
                             return "hide-header";
