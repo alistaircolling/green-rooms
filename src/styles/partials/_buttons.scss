@@ -41,8 +41,8 @@ $foreground-color:white) {
     @include add-button-styles($foreground-color: black);
 }
 .mobile-parent {
-    margin: 1em;
-    height: 60vh;
+    /*background-color:yellow;*/
+    height: 70vh;
     width: 100%;
     text-align: center;
     display: flex;
