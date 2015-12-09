@@ -1,4 +1,4 @@
-routerApp.controller('HeaderController', function($scope, $rootScope, DeviceService) {
+routerApp.controller('HeaderController', function($scope, $rootScope, $window, DeviceService) {
     console.log("header controller here");
     /* $scope.isMobileHeader = function() {*/
     //var returnVal = (DeviceService.isMobile) ? "mobile-header" : "desktop-header";
@@ -23,6 +23,15 @@ routerApp.controller('HeaderController', function($scope, $rootScope, DeviceServ
                         $scope.showHeader = function() {
                             return "show-header";
                         };
+                        //Scroll to hide address bar on mobile
+                        $window.addEventListener("load", function() {
+                            // Set a timeout...
+                            setTimeout(function() {
+                                // Hide the address bar!
+                                console.log("HIOHIIII");
+                                $window.scrollTo(0, 1);
+                            }, 0);
+                        });
                         break;
                     default:
                         $scope.showHeader = function() {
