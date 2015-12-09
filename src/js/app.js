@@ -1,4 +1,4 @@
-var routerApp = angular.module('routerApp', ['ui.router']);
+var routerApp = angular.module('routerApp', ['uz.mailto', 'ui.router']);
 
 //create device service first
 routerApp.factory('DeviceService', function() {

@@ -1,4 +1,7 @@
-routerApp.controller('BedsController', function($scope) {
+routerApp.controller('BedsController', function($scope, Mailto) {
+    var recepient = "enquiries@green-rooms.com";
+    $scope.href = Mailto.url(recepient);
+    $scope.enquiryButton = "EMAIL TO BOOK";
     $scope.rooms = [{
         name: 'Basic',
         price: 50,

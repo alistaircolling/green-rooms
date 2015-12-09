@@ -58,7 +58,7 @@ gulp.task('copy-yml', function() {
 });
 //TODO - figure out how bower libs are meant to be copied across
 gulp.task('copy-bower', function() {
-    return gulp.src('bower_components/angular-deckgrid/angular-deckgrid.js').pipe(plumber({
+    return gulp.src('bower_components/*/*.js').pipe(plumber({
             errorHandler: function(error) {
                 console.log(error.message);
                 this.emit('end');
