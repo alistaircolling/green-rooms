@@ -9,7 +9,6 @@ var gulp = require('gulp'),
     imageminJpegtran = require('imagemin-jpegtran'),
     cache = require('gulp-cache'),
     sass = require('gulp-sass'),
-    print = require('gulp-print'),
     browserSync = require('browser-sync'),
     favicons = require('gulp-favicons'),
     del = require('del'),
@@ -136,7 +135,6 @@ gulp.task('scripts', function() {
 gulp.task('html', function() {
     return gulp.src(['src/*.html'])
         .pipe(gulp.dest('dist/'))
-        .pipe(print())
         .pipe(browserSync.reload({
             stream: true
         }));
