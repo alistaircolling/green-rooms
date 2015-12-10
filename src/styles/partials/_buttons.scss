@@ -66,4 +66,15 @@ $foreground-color:white) {
     float: left;
     padding: .2em .4em;
     @include add-button-styles($foreground-color: $blue);
+    cursor: pointer;
+    &:hover {
+        background-color: white;
+        border-color: $blue;
+    }
+    &:active {
+        background-color: $blue;
+        border-color: white;
+        color: white;
+    }
+   
 }
