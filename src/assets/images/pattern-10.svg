@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="453px" height="596px" viewBox="0 0 453 596" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.4.4 (17249) - http://www.bohemiancoding.com/sketch -->
+    <title>pattern-10</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path id="path-1" d="M0,561.259986 L0,0 L396.850657,0 L396.850657,561.259986 L0,561.259986 Z"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="pattern-2" sketch:type="MSLayerGroup" transform="translate(27.000000, 8.000000)">
+            <g id="g10" transform="translate(198.500000, 281.010000) scale(1, -1) translate(-198.500000, -281.010000) translate(0.000000, 0.260000)">
+                <g id="g12">
+                    <g id="g14">
+                        <g id="g16-Clipped">
+                            <mask id="mask-2" sketch:name="path18" fill="white">
+                                <use xlink:href="#path-1"></use>
+                            </mask>
+                            <g id="path18"></g>
+                            <g id="g16" mask="url(#mask-2)" stroke-width="3.9999999" sketch:type="MSShapeGroup">
+                                <g transform="translate(-24.799999, -23.599999)">
+                                    <path d="M384.645324,335.038658 L354.561991,364.533991" id="path22" stroke="#034EC9"></path>
+                                    <path d="M369.617991,47.5025988 L376.875324,89.0041311" id="path24" stroke="#034EC9"></path>
+                                    <path d="M309.307992,235.904661 L335.319325,269.045327" id="path26" stroke="#034EC9"></path>
+                                    <path d="M224.151994,223.655328 L248.36666,189.179995" id="path28" stroke="#034EC9"></path>
+                                    <path d="M428.953323,224.809328 L391.04799,206.417328" id="path30" stroke="#034EC9"></path>
+                                    <path d="M298.933993,121.08133 L272.54466,88.2393311" id="path32" stroke="#034EC9"></path>
+                                    <path d="M258.221994,430.647989 L289.735993,458.609989" id="path34" stroke="#034EC9"></path>
+                                    <path d="M257.053994,589.731319 L285.82866,558.957319" id="path36" stroke="#034EC9"></path>
+                                    <path d="M402.783323,445.994656 L368.946657,420.893323" id="path38" stroke="#034EC9"></path>
+                                    <path d="M185.269995,517.905987 L194.745995,558.957319" id="path40" stroke="#034EC9"></path>
+                                    <path d="M152.58533,197.296662 L119.524664,171.179996" id="path42" stroke="#034EC9"></path>
+                                    <path d="M50.4718654,97.7606642 L80.546598,68.2533983" id="path44" stroke="#034EC9"></path>
+                                    <path d="M50.4718654,352.935325 L63.1674651,393.10999" id="path46" stroke="#034EC9"></path>
+                                    <path d="M329.729325,247.58666 L335.456658,289.327993" id="path48" stroke="#034EC9"></path>
+                                    <path d="M146.039996,388.71399 L171.826662,422.033323" id="path50" stroke="#034EC9"></path>
+                                    <path d="M60.4046652,262.677993 L100.688664,250.33666" id="path52" stroke="#EE4023"></path>
+                                    <path d="M60.4046652,262.677993 L100.688664,250.33666" id="path54" stroke="#EE4023"></path>
+                                    <path d="M368.945991,541.736653 L349.521991,504.349987" id="path56" stroke="#EE4023"></path>
+                                    <path d="M258.091994,303.924659 L265.349327,345.425325" id="path58" stroke="#EE4023"></path>
+                                    <path d="M0.0569999986,278.76866 L35.1051991,302.147992" id="path60" stroke="#EE4023"></path>
+                                    <path d="M415.34599,504.349987 L447.667322,477.325321" id="path62" stroke="#EE4023"></path>
+                                    <path d="M224.404661,40.2140657 L236.988661,0.00726666649" id="path64" stroke="#034EC9"></path>
+                                    <path d="M281.353993,413.71199 L266.601327,453.165322" id="path66" stroke="#EE4023"></path>
+                                    <path d="M140.694663,184.238662 L152.585996,224.646661" id="path68" stroke="#EE4023"></path>
+                                    <path d="M120.65733,471.198655 L91.402331,501.503321" id="path70" stroke="#EE4023"></path>
+                                    <path d="M315.647325,173.913996 L355.081991,159.087329" id="path72" stroke="#EE4023"></path>
+                                    <path d="M368.945991,95.109331 L384.805324,56.0786653" id="path74" stroke="#EE4023"></path>
+                                    <path d="M114.95933,501.503321 L126.353997,460.942655" id="path76" stroke="#EE4023"></path>
+                                    <path d="M49.0559988,546.97732 L21.1541661,515.408654" id="path78" stroke="#EE4023"></path>
+                                    <path d="M183.798662,140.412663 L167.053996,101.749997" id="path80" stroke="#EE4023"></path>
+                                    <path d="M144.039996,329.074658 L178.977329,305.527992" id="path82" stroke="#EE4023"></path>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

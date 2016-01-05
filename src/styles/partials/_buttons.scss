@@ -95,3 +95,7 @@ $foreground-color:white) {
   }
 
 }
+.menu-button{
+  @include letter-menu-text ;
+  margin: .5em;
+}

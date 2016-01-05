@@ -14,7 +14,7 @@
 }
 .h1 {
     line-height: 1em;
-    //same as logo 
+    //same as logo
     font-weight: 900;
     letter-spacing: .22em;
 }
@@ -38,6 +38,17 @@
 .logo-text {
     font-family: Pitch;
     font-size: 2.5em;
+    line-height: 1.2em;
+    letter-spacing: .23em;
+    //ALWAYS has a box around it !!
+    padding: .53em .62em .57em .8em;
+    border-style: solid;
+    border-width: .08em;
+    transform: scale(.7);
+}
+@mixin letter-menu-text() {
+    font-family: Pitch;
+    font-size: 1.5em;
     line-height: 1.2em;
     letter-spacing: .23em;
     //ALWAYS has a box around it !!
