@@ -11,12 +11,12 @@ routerApp.controller('HeaderController', function($scope, $rootScope, $window, D
                 switch (toState.name) {
                     case "about":
                         $scope.showHeader = function() {
-                            return "show-header";
+                            return "hide-header";
                         };
                         break;
                     case "beds":
                         $scope.showHeader = function() {
-                            return "show-header";
+                            return "hide-header";
                         };
                         break;
                     case "home-mobile":
