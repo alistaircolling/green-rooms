@@ -1,5 +1,4 @@
-@mixin add-button-styles($bg-color:white,
-$foreground-color:white) {
+@mixin add-button-styles($bg-color:white, $foreground-color:white) {
   cursor: pointer;
   &:hover {
     background-color: $foreground-color;
@@ -51,8 +50,8 @@ $foreground-color:white) {
   vertical-align: middle;
 }
 .mobile-child {
-  display: flex;
   align-items: center;
+  display: flex;
   justify-content: center;
   flex-grow: 1;
 }
@@ -97,5 +96,7 @@ $foreground-color:white) {
 }
 .menu-button{
   @include letter-menu-text ;
-  margin: .5em;
+  margin: 5em 3em;
+  border-width:.1em;
+
 }

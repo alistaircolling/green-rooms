@@ -1,27 +1,71 @@
-<div class="flex">
-    <!-- container bg --->
-    <div class="center m4 main-box-blue">
-        <!-- enquiry button --->
-        <div>
-            <div class="">
-                <a ng-href="{{href}}" ng-bind="enquiryButton" class="red-button red-email-button m3 p1"></a>
-            </div>
-        </div>
-        <!-- bed type container -->
-        <div class="p1 m3 center black" ng-repeat="room in rooms">
-            <!--- title and price container -->
-            <div class="clearfix black">
-                <div class="h2  left-align bold " ng-bind="room.name"></div>
-                <div class="h3  left-align p1 " ng-bind="room.price | pricer"></div>
-            </div>
-            <!--- image and description fold under when 2 small -->
-            <div class="clearfix">
-                <div class="sm-col sm-col-12 md-col-6 ">
-                    <img ng-src="{{room.image}}" />
+<div class="pattern8">
+    <div class="flex ">
+        <div class="bg-white m2 p3" style="width:90%;">
+            <div class="center m2">
+                <div class="center">
+                    <a ui-sref="home" class="logo-text mx-auto blue-button center-block">
+            GREEN<br/>ROOMS
+          </a>
                 </div>
-                <div class="sm-col sm-col-12 md-col-6 left-align p3 h4" ng-bind="room.copy"></div>
+                <!-- MENU BUTTONS -->
+                <div class="p2 m1" style="text-align:center">
+                    <a ui-sref="beds" class="menu-button blue-button">
+            ROOMS</a>
 
+                    <a ui-sref="about" class="menu-button blue-button">
+            ABOUT
+          </a>
+                </div>
             </div>
+            <div class="p2 center">
+
+                <img src="http://r-ec.bstatic.com/images/hotel/840x460/202/2028097.jpg" class="center bg-blue"
+                />
+            </div>
+            <div class="flex">
+                <div class="p2 m2 border">
+                    <div class="flex ">
+                        <div class="h3 left-float ">SINGLES</div>
+                        <!--<div class="h3 right-float">£100</div>-->
+                    </div>
+                    <div class="p m1 ">There are 3 single rooms. There are 3 single rooms.There are
+                        3 single rooms.There are 3 single rooms.There are 3 single
+                        rooms.There are 3 single rooms.</div>
+                    <div class="p m1 ">RATE.....£60</div>
+                </div>
+                <div class="p2 m2 border">
+                    <div class="flex ">
+                        <div class="h3 left-float ">DOUBLES</div>
+                        <!--<div class="h3 right-float">£100</div>-->
+                    </div>
+                    <div class="p m1 ">There are 3 single rooms. There are 3 single rooms.There are
+                        3 single rooms.There are 3 single rooms.There are 3 single
+                        rooms.There are 3 single rooms.</div>
+                </div>
+                <div class="p2 m2 border">
+                    <div class="flex ">
+                        <div class="h3 left-float ">DELUXE DOUBLES</div>
+                        <!--<div class="h3 right-float">£100</div>-->
+                    </div>
+                    <div class="p m1 ">There are 3 single rooms. There are 3 single rooms.There are
+                        3 single rooms.There are 3 single rooms.There are 3 single
+                        rooms.There are 3 single rooms.</div>
+                </div>
+                <div class="p2 m2 border">
+                    <div class="flex ">
+                        <div class="h3 left-float ">DORMITORY £100</div>
+                        <!--<div class="h3 right-float">£100</div>-->
+                    </div>
+                    <div class="p m1 ">There are 3 single rooms. There are 3 single rooms.There are
+                        3 single rooms.There are 3 single rooms.There are 3 single
+                        rooms.There are 3 single rooms.</div>
+                </div>
+            </div>
+            <!--<div class="h1 center">HELLO</div>-->
+            <!--<div class="h1 center">HELLO</div>-->
+            <!--<div class="h1 center">HELLO</div>-->
+            <!--<div class="h1 center">HELLO</div>-->
+            <!--<div class="h1 center">HELLO</div>-->
         </div>
     </div>
 </div>

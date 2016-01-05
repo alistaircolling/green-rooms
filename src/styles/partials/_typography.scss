@@ -22,6 +22,9 @@
     text-align: left;
     color:black;
 }
+.left-float{
+    float:left;
+}
 .right-float{
     float:right;
 }
@@ -52,7 +55,7 @@
     line-height: 1.2em;
     letter-spacing: .23em;
     //ALWAYS has a box around it !!
-    padding: .53em .62em .57em .8em;
+    padding: .6em 1.6em;
     border-style: solid;
     border-width: .08em;
 }
