@@ -18,15 +18,21 @@
     font-weight: 900;
     letter-spacing: .22em;
 }
+.card-title {
+    font-size: 1.5em;
+    border-bottom: 1px solid;
+    display:inline-block;
+}
 .body-copy {
     text-align: left;
-    color:black;
+    color: black;
+    padding: 1em 0;
 }
-.left-float{
-    float:left;
+.left-float {
+    float: left;
 }
-.right-float{
-    float:right;
+.right-float {
+    float: right;
 }
 .logo-text {
     font-family: Pitch;

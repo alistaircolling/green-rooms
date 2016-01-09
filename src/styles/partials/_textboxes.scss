@@ -86,3 +86,12 @@ $foreground-color:white) {
 .black-foreground {
     @include color-bg-theme($foreground-color: black);
 }
+.room-card{
+   .border{
+    border-color:red;
+    padding: 1em;
+    border-width:10px;
+   }
+
+
+}

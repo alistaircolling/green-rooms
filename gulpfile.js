@@ -93,7 +93,7 @@ gulp.task('styles', function() {
                 this.emit('end');
             }
         }))
-        .pipe(sass())
+        .pipe(sass().on('error', sass.logError))
         .pipe(prefix('last 2 versions'))
         .pipe(gulp.dest('dist/styles/'))
         .pipe(browserSync.reload({
