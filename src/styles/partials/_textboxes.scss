@@ -86,7 +86,7 @@ $foreground-color:white) {
 .black-foreground {
     @include color-bg-theme($foreground-color: black);
 }
-.room-card {
+.paper-card {
     color: $blue;
     margin: 1em;
     .border {

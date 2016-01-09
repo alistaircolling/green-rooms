@@ -49,13 +49,13 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
             //TODO update names of controllers to be TitleCase
     })
 
-    //BEDS ==================================
-    .state('beds', {
-        url: '/beds',
+    //rooms ==================================
+    .state('rooms', {
+        url: '/rooms',
         views: {
             '': {
-                templateUrl: 'partial-beds.html',
-                controller: 'BedsController'
+                templateUrl: 'partial-rooms.html',
+                controller: 'rooms-controller'
             }
         }
     })
