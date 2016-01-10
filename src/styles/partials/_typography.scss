@@ -23,13 +23,18 @@
     border-bottom: 1px solid;
     display: inline-block;
 }
+.body-copy-center {
+    text-align: center;
+    color: black;
+    padding: 1em 0;
+}
 .body-copy {
     text-align: left;
     color: black;
     padding: 1em 0;
 }
 .body-copy-white {
-    text-align: left;
+    text-align: center;
     color: white;
     padding: 1em 0;
 }
