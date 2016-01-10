@@ -1,6 +1,12 @@
 .center-block {
-  display: inline-block;
+    display: inline-block;
 }
-.float-left{
-  float:left;
+.float-left {
+    float: left;
 }
+.overlap-up-left {
+    position: relative;
+    top: -3em;
+    right: 2em;
+}
+
