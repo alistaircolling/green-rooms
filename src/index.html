@@ -4,33 +4,34 @@
 <html>
 
 <head>
-<meta name="apple-mobile-web-app-capable" content="yes" />
-<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
-<meta http-equiv="Pragma" content="no-cache"/>
-<meta http-equiv="Expires" content="0"/>
-<!-- CSS (load bootstrap) -->
-<!--<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"> -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"
+    />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <!-- CSS (load bootstrap) -->
+    <!--<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"> -->
 
-<!-- Load BASS CSS -->
-<!--TODO replace live link-->
-<!--<link href="http://d2v52k3cl9vedd.cloudfront.net/basscss/7.0.4/basscss.min.css"-->
-<link href="styles/basscss.min.css" rel="stylesheet">
-<!--rel="stylesheet">-->
-<link href="styles/main.css" rel="stylesheet">
-<!--<script src="//console.re/connector.js" data-channel="alialiali" id="consolerescript"></script>-->
-<style>
-.navbar {
-	border-radius: 0;
-}
-</style>
-<style>
-</style>
-<!-- JS (load angular, ui-router, and our custom js file) -->
-<script src="http://code.angularjs.org/1.2.13/angular.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
-<script src="js/main.min.js"></script>
-<script src="js/angular-mailto/angular-mailto.js"></script>
-<script src="js/angular-animate/angular-animate.min.js"></script>
+    <!-- Load BASS CSS -->
+    <!--TODO replace live link-->
+    <!--<link href="http://d2v52k3cl9vedd.cloudfront.net/basscss/7.0.4/basscss.min.css"-->
+    <link href="styles/basscss.min.css" rel="stylesheet">
+    <!--rel="stylesheet">-->
+    <link href="styles/main.css" rel="stylesheet">
+    <!--<script src="//console.re/connector.js" data-channel="alialiali" id="consolerescript"></script>-->
+    <style>
+        .navbar {
+            border-radius: 0;
+        }
+    </style>
+    <style>
+    </style>
+    <!-- JS (load angular, ui-router, and our custom js file) -->
+    <script src="http://code.angularjs.org/1.2.13/angular.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
+    <script src="js/main.min.js"></script>
+    <script src="js/angular-mailto/angular-mailto.js"></script>
+    <script src="js/angular-animate/angular-animate.min.js"></script>
 
 </head>
 
@@ -38,23 +39,24 @@
 
 <body ng-app="routerApp" style="" autoscroll="false" class="">
 
-<div class="" ng-controller="HeaderController" ng-class="showHeader()">
-	<div class="flex">
-		<div ui-sref="home-mobile" class="logo-text-mobile blue-bg mx-auto">
-			GREEN<br/>ROOMS
-		</div>
-	</div>
-</div>
+    <div class="" ng-controller="HeaderController" ng-class="showHeader()">
+        <div class="flex">
+            <div ui-sref="home-mobile" class="logo-text-mobile blue-bg mx-auto">
+                GREEN
+                <br/>ROOMS
+            </div>
+        </div>
+    </div>
 
 
-<div class="flex" style="">
-	<!---    NAV ---- FIXED -->
-	<div style="z-index:0;width:100%" class="mx-auto">
-		<div ui-view autoscroll="false"></div>
-	</div>
-	<!-- <div id="bg" class="pattern8" style="z-index:-1;visibility:visible;
+    <div class="flex" style="">
+        <!---    NAV ---- FIXED -->
+        <div style="z-index:0;width:100%" class="mx-auto">
+            <div ui-view autoscroll="false"></div>
+        </div>
+        <!-- <div id="bg" class="pattern8" style="z-index:-1;visibility:visible;
 		background-size:cover;"></div> -->
-</div>
+    </div>
 </body>
 
 </html>
