@@ -67,11 +67,12 @@
 }
 @mixin letter-menu-text() {
     font-family: Pitch;
-    font-size: 1.5em;
+    font-size: 1em;
     line-height: 1.2em;
     letter-spacing: .23em;
     //ALWAYS has a box around it !!
-    padding: .6em 1.6em;
+    padding: .6em 1.0em;
+    margin: .5em;
     border-style: solid;
     border-width: .08em;
 }
