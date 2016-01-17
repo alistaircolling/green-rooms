@@ -96,6 +96,11 @@ $foreground-color:white) {
 }
 .menu-button {
     @include letter-menu-text;
-    margin: 3em 1em;
+    float:left;
+    /*margin: 3em 1em;*/
     border-width: .1em;
+}
+.menu-parent {
+    white-space: nowrap;
+    overflow: auto;
 }
