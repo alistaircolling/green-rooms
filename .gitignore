@@ -13,4 +13,5 @@ dist/*
 dist/
 *.un*
 *.un~
-
+*swo
+*.log
