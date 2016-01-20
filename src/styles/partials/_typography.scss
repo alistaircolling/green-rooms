@@ -106,3 +106,8 @@
     color: $red;
     background: white;
 }
+.two-column{
+    columns: 2 20em;
+    -webkit-columns: 2 20em;
+    -moz-columns: 2 20em;
+}
