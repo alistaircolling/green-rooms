@@ -62,43 +62,53 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
 
     // ABOUT PAGE AND MULTIPLE NAMED VIEWS =================================
     .state('building', {
-        url: '/building',
-        views: {
-            //main template (notice blank string key)
-            '': {
-                templateUrl: 'partial-building.html',
-                controller: 'BuildingController'
+            url: '/building',
+            views: {
+                //main template (notice blank string key)
+                '': {
+                    templateUrl: 'partial-building.html',
+                    controller: 'BuildingController'
+                }
             }
-        }
-    })
-    // ABOUT PAGE AND MULTIPLE NAMED VIEWS =================================
-   .state('about', {
-        url: '/about',
-        views: {
-            //main template (notice blank string key)
-            '': {
-                templateUrl: 'partial-about.html',
-                controller: 'AboutController'
+        })
+        // ABOUT PAGE AND MULTIPLE NAMED VIEWS =================================
+        .state('about', {
+            url: '/about',
+            views: {
+                //main template (notice blank string key)
+                '': {
+                    templateUrl: 'partial-about.html',
+                    controller: 'AboutController'
+                }
             }
-        }
-    })
-   .state('areas', {
-        url: '/areas',
-        views: {
-            //main template (notice blank string key)
-            '': {
-                templateUrl: 'partial-areas.html',
-                controller: 'AreasController'
+        })
+        .state('areas', {
+            url: '/areas',
+            views: {
+                //main template (notice blank string key)
+                '': {
+                    templateUrl: 'partial-areas.html',
+                    controller: 'AreasController'
+                }
             }
-        }
-    })
-   .state('questions', {
-        url: '/questions',
+        })
+        .state('questions', {
+            url: '/questions',
+            views: {
+                //main template (notice blank string key)
+                '': {
+                    templateUrl: 'partial-questions.html',
+                    controller: 'QuestionsController'
+                }
+            }
+        })
+    .state('links', {
+        url: '/links',
         views: {
             //main template (notice blank string key)
             '': {
-                templateUrl: 'partial-questions.html',
-                controller: 'QuestionsController'
+                templateUrl: 'partial-links.html',
+                controller: 'LinksController'
             }
         }
     });
