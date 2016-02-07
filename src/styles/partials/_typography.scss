@@ -114,5 +114,19 @@
 }
 .black-copy{
     color: black;
-
+}
+.input-email{
+    border-style:solid;
+    border-width:.1em;
+    border-color:black;
+    min-width:24em;
+}
+.subscribe-button{
+   margin: 0px;
+   cursor: pointer;
+   background-color:white;
+   border-style:solid;
+   border-color:black;
+   border-width:0.1em;
+   padding:1em;
 }
