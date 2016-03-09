@@ -101,6 +101,15 @@ $foreground-color:white) {
         border-width: 1px;
     }
 }
+.blank-card {
+    color: $blue;
+    margin: 1em;
+    .border {
+        border-color: $blue;
+        padding: 1em;
+        border-width: 1px;
+    }
+}
 .paper-card {
     color: $blue;
     margin: 1em;
