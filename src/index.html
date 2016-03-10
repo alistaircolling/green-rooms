@@ -39,7 +39,7 @@
 
 <body ng-app="routerApp" style="" autoscroll="false" class="">
 
-    <div class="flex" style="">
+    <div class="flex" style="display:block">
         <div class="pattern8" style="min-height:100vh">
             <div class="bg-white letter-bg p3 m2" style="">
                 <div class="center">
@@ -47,14 +47,14 @@
                         <a ui-sref="home" class="logo-text mx-auto blue-button center-block"> GREEN<br/>ROOMS</a>
                     </div>
                     <div class="flex flex-center">
-                    <div class="mx-auto">
-                        <a ui-sref="about" class="menu-button blue-button">ABOUT</a>
-                        <a ui-sref="rooms" class="menu-button blue-button">ROOMS</a>
-                        <a ui-sref="building" class="menu-button blue-button">BUILDING</a>
-                        <a ui-sref="areas" class="menu-button blue-button">SPACES</a>
-                        <a ui-sref="questions" class="menu-button blue-button">QUESTIONS</a>
-                        <a ui-sref="links" class="menu-button blue-button">LINKS</a>
-                    </div>
+                        <div class="mx-auto">
+                            <a ui-sref="about" class="menu-button blue-button">ABOUT</a>
+                            <a ui-sref="rooms" class="menu-button blue-button">ROOMS</a>
+                            <a ui-sref="building" class="menu-button blue-button">BUILDING</a>
+                            <a ui-sref="areas" class="menu-button blue-button">SPACES</a>
+                            <a ui-sref="questions" class="menu-button blue-button">QUESTIONS</a>
+                            <a ui-sref="links" class="menu-button blue-button">LINKS</a>
+                        </div>
                     </div>
                 </div>
 
@@ -71,7 +71,15 @@
                 </div>
             </div>
         </div>
+        <footer class="">
+            <div class="container">
+                <a ui-sref="terms" class="center h5 btn block">Terms and conditions</a>
+                </li>
+            </div>
+        </footer>
     </div>
+
 </body>
+
 
 </html>

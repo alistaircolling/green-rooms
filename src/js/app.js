@@ -102,6 +102,17 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
                 }
             }
         })
+        .state('terms', {
+            url: '/terms',
+            views: {
+                //main template (notice blank string key)
+                '': {
+                    templateUrl: 'partial-terms.html',
+                    controller: 'TermsController'
+                }
+            }
+        })
+
     .state('links', {
         url: '/links',
         views: {
