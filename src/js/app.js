@@ -82,13 +82,13 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
                 }
             }
         })
-        .state('areas', {
-            url: '/areas',
+        .state('spaces', {
+            url: '/spaces',
             views: {
                 //main template (notice blank string key)
                 '': {
-                    templateUrl: 'partial-areas.html',
-                    controller: 'AreasController'
+                    templateUrl: 'partial-spaces.html',
+                    controller: 'SpacesController'
                 }
             }
         })
