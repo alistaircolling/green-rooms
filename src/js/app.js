@@ -113,13 +113,13 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
             }
         })
 
-    .state('links', {
-        url: '/links',
+    .state('press', {
+        url: '/press',
         views: {
             //main template (notice blank string key)
             '': {
-                templateUrl: 'partial-links.html',
-                controller: 'LinksController'
+                templateUrl: 'partial-press.html',
+                controller: 'PressController'
             }
         }
     });
