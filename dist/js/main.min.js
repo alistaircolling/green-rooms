@@ -29,7 +29,9 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
                 console.log("home controller");
                 if (DeviceService.isMobile) {
                     console.log("is mobile");
-                    $state.go('home-mobile');
+                    //TEMP HACK UNTIL MOBILE IS SORTED
+                    $state.go('home');
+                    //$state.go('home-mobile');
                 } else {
                     console.log("is desktop");
                     $state.go('home');
