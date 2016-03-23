@@ -30,8 +30,8 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
                 if (DeviceService.isMobile) {
                     console.log("is mobile");
                     //TEMP HACK UNTIL MOBILE IS SORTED
-                    $state.go('home');
-                    //$state.go('home-mobile');
+                    //$state.go('home');
+                    $state.go('home-mobile');
                 } else {
                     console.log("is desktop");
                     $state.go('home');

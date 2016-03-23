@@ -1,9 +1,9 @@
 routerApp.controller('HeaderController', function($scope, $rootScope, $window, DeviceService) {
     console.log("header controller here");
-    /* $scope.isMobileHeader = function() {*/
-    //var returnVal = (DeviceService.isMobile) ? "mobile-header" : "desktop-header";
-    //return returnVal;
-    /*};*/
+     $scope.isMobileHeader = function() {
+    var returnVal = (DeviceService.isMobile) ? "mobile-header" : "desktop-header";
+    return returnVal;
+    };
     $rootScope.$on('$stateChangeSuccess',
         function(event, toState, toParams, fromState, fromParams) {
             console.log("STATE CHANGE:" + toState.name);

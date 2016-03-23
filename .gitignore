@@ -13,6 +13,7 @@ dist/**
 /dist
 dist/
 **dist/
+**dist/**
 *.un*
 *.un~
 *swo
