@@ -46,7 +46,7 @@
                     <div class="">
                         <a ui-sref="home" class="logo-text mx-auto blue-button center-block">GREEN<br/>ROOMS</a>
                     </div>
-                    <div class="flex flex-center">
+                    <div class="flex flex-center" ng-class="showHeader()">
                         <div class="mx-auto">
                             <a ui-sref="about" class="menu-button blue-button">ABOUT</a>
                             <a ui-sref="rooms" class="menu-button blue-button">ROOMS</a>
@@ -61,8 +61,7 @@
                 <div class="" ng-controller="HeaderController" ng-class="showHeader()">
                     <div class="flex">
                         <div ui-sref="home-mobile" class="logo-text-mobile blue-bg mx-auto">
-                            GREEN
-                            <br/>ROOMS
+                            GREEN<br/>ROOMS
                         </div>
                     </div>
                 </div>
