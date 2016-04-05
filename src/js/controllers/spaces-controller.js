@@ -1,4 +1,4 @@
-routerApp.controller('AreasController', function($scope) {
+routerApp.controller('SpacesController', function($scope) {
     //Could inject data service here
     $scope.title = 'Who stays here?';
 
