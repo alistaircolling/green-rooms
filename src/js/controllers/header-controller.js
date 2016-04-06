@@ -58,7 +58,7 @@ routerApp.controller('HeaderController', function($scope, $rootScope, $window, D
                 switch (toState.name) {
                     case "about":
                         $scope.mainHeader = function() {
-                            return "hide-header";
+                            return "show-header";
                         };
                         $scope.mobileHeader = function() {
                             return "hide-header";
@@ -66,10 +66,10 @@ routerApp.controller('HeaderController', function($scope, $rootScope, $window, D
                         break;
                     case "rooms":
                         $scope.mainHeader = function() {
-                            return "hide-header";
+                            return "show-header";
                         };
                         $scope.mobileHeader = function() {
-                            return "show-header";
+                            return "hide-header";
                         };
                         break;
                     case "home-mobile":
