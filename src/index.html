@@ -42,28 +42,30 @@
     <div class="flex">
         <div class="pattern8" style="min-height:100vh; width:100%">
             <div class="bg-white letter-bg p3 m2" style="">
-                <div class="center">
-                    <div class="">
-                        <a ui-sref="home" class="logo-text mx-auto blue-button center-block">GREEN<br/>ROOMS</a>
-                    </div>
-                    <div class="flex flex-center" ng-class="showHeader()">
-                        <div class="mx-auto">
-                            <a ui-sref="about" class="menu-button blue-button">ABOUT</a>
-                            <a ui-sref="rooms" class="menu-button blue-button">ROOMS</a>
-                            <a ui-sref="building" class="menu-button blue-button">BUILDING</a>
-                            <a ui-sref="spaces" class="menu-button blue-button">SPACES</a>
-                            <a ui-sref="questions" class="menu-button blue-button">QUESTIONS</a>
-                            <a ui-sref="press" class="menu-button blue-button">PRESS</a>
-                        </div>
-                    </div>
-                </div>
+                <div ng-controller="HeaderController" class="center">
 
-                <div class="" ng-controller="HeaderController" ng-class="showHeader()">
-                    <div class="flex">
-                        <div ui-sref="home-mobile" class="logo-text-mobile blue-bg mx-auto">
-                            GREEN<br/>ROOMS
+                    <div ng-class="mainHeader()">
+                        <a ui-sref="home" class="logo-text mx-auto blue-button center-block">GREEN<br/>ROOMS</a>
+                        <div class="flex flex-center" >
+                            <div class="mx-auto">
+                                <a ui-sref="about" class="menu-button blue-button">ABOUT</a>
+                                <a ui-sref="rooms" class="menu-button blue-button">ROOMS</a>
+                                <a ui-sref="building" class="menu-button blue-button">BUILDING</a>
+                                <a ui-sref="spaces" class="menu-button blue-button">SPACES</a>
+                                <a ui-sref="questions" class="menu-button blue-button">QUESTIONS</a>
+                                <a ui-sref="press" class="menu-button blue-button">PRESS</a>
+                            </div>
                         </div>
                     </div>
+
+                    <div class="" ng-class="mobileHeader()">
+                        <div class="flex">
+                            <div ui-sref="home-mobile" class="logo-text-mobile blue-bg mx-auto">
+                                GREEN<br/>ROOMS
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
                 <div style="z-index:0;width:100%" class="mx-auto">
                     <div ui-view autoscroll="false"></div>
