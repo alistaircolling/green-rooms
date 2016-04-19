@@ -17,37 +17,46 @@ routerApp.factory('DeviceService', function() {
     };
 });
 
-routerApp.config(function($stateProvider, $urlRouterProvider) {
-    $urlRouterProvider.otherwise('/-home');
+routerApp.config(function($stateProvider, $urlRouterProvider, DeviceService) {
+    if (DeviceService.isMobile) {
+        $urlRouterProvider.otherwise('/home-mobile');
+                console.log("----is mobile");
+    } else {
+        $urlRouterProvider.otherwise('/home');
+
+                console.log("----is not mobile");
+    }
     // add states to the state provider
     console.log("router app---");
-    $stateProvider.state('-home', {
-            url: '/-home',
-            //templateUrl: 'partial-home.html',
-            controller: function($scope, $state, DeviceService) {
-                console.log("home controller");
-                if (DeviceService.isMobile) {
-                    console.log("is mobile");
-                    //TEMP HACK UNTIL MOBILE IS SORTED
-                    //$state.go('home');
-                    $state.go('home-mobile');
-                } else {
-                    console.log("is desktop");
-                    $state.go('home');
-                }
-            }
-        })
-        .state('home', {
-            url: '/home',
-            templateUrl: 'partial-home.html',
-            controller: 'home-controller'
-                //TODO update names of controllers to be TitleCase
-        })
-        .state('home-mobile', {
-            url: '/m-home',
-            templateUrl: 'partial-home-mobile.html',
-            controller: 'mobile-home-controller'
-        })
+
+    //$stateProvider.state('-home', {
+        //url: '/-home',
+        ////templateUrl: 'partial-home.html',
+        //controller: function($scope, $state, DeviceService) {
+            //if (DeviceService.isMobile) {
+                //$state.go('home-mobile');
+                //console.log("----is mobile");
+                ////TEMP HACK UNTIL MOBILE IS SORTED
+                ////$state.go('home');
+            //} else {
+                //console.log("is desktop");
+                //$state.go('home');
+            //}
+        //}
+    //})
+
+    $stateProvider.state('home', {
+        url: '/home',
+        templateUrl: 'partial-home.html',
+        controller: 'home-controller'
+            //TODO update names of controllers to be TitleCase
+    })
+
+    .state('home-mobile', {
+        url: '/m-home',
+        templateUrl: 'partial-home-mobile.html',
+        controller: 'mobile-home-controller'
+    })
 
 
 
