@@ -114,6 +114,16 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
                 }
             }
         })
+        .state('termsandcs', {
+            url: '/termsandcs',
+            views: {
+                //main template (notice blank string key)
+                '': {
+                    templateUrl: 'partial-tandcs.html',
+                    controller: 'TermsController'
+                }
+            }
+        })
 
     .state('press', {
         url: '/press',

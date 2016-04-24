@@ -123,7 +123,7 @@ gulp.task('scripts', function() {
             suffix: '.min'
         }))
         // uglify
-        //  .pipe(uglify())
+     //     .pipe(uglify())
         //put back in dist folder
         .pipe(gulp.dest('dist/js/'))
         //reload BS
