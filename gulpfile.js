@@ -224,6 +224,11 @@ gulp.task('sass', function() {
 });
 
 
+gulp.task('build', function(callback) {
+    //wait until clean has finished before running other tasks in paralell
+    runSequence('clean', ['styles', 'scripts', 'html', 'images', 'copy-svgs', 'fonts'], callback);
+});
+
 gulp.task('default', function(callback) {
     //wait until clean has finished before running other tasks in paralell
     runSequence('clean', ['sass', 'scripts', 'html', 'images', 'copy-yml',
