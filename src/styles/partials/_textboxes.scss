@@ -21,7 +21,7 @@ $foreground-color:white) {
     color: $foreground-color;
 }
 .logo-box {
-    @extend logo-text;
+    @extend logo-text !optional ;
     margin: 1em 0 1em 0;
 }
 .main-box-blue {
