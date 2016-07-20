@@ -7,13 +7,7 @@ node_modules
 **/generated/_icons.sass
 npm-debug.log
 *.swp
-dist/*
-dist/**
-/dist/
-/dist
 dist/
-**dist/
-**dist/**
 *.un*
 *.un~
 *swo
