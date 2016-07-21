@@ -71,6 +71,9 @@
                 </div>
                 <div style="z-index:0;width:100%" class="mx-auto">
                     <div ui-view autoscroll="false"></div>
+                <footer ng-hide="'about' | isState"  class="center">
+                    <a ui-sref="termsandcs" class="h5 p3 center" href="#/termsandcs">Terms and conditions</a>
+                </footer>
                 </div>
             </div>
         </div>
