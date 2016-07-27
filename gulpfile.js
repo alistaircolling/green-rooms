@@ -113,8 +113,8 @@ gulp.task('scripts', function() {
             }
         }))
         //check for errors
-        .pipe(jshint())
-        .pipe(jshint.reporter('default'))
+        //.pipe(jshint())
+        //.pipe(jshint.reporter('default'))
 
     /* concat all js into one main.js file */
     .pipe(concat('main.js'))
