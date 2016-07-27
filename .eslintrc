@@ -1,0 +1,22 @@
+{
+    "parserOptions": {
+        "ecmaVersion": 6,
+            "sourceType": "module",
+            "ecmaFeatures": {
+                "jsx": true
+            }
+    },
+        "rules": {
+            "semi": 2,
+            "strict": [2, "global"],
+            "no-multi-spaces": 0,
+            "no-use-before-define": 0,
+            "no-console": 0,
+            "padded-blocks": 0,
+            "no-else-return": 0       
+        },
+        "env":{
+            "node": true,
+            "es6": true
+        }
+}
