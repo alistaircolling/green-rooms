@@ -14,7 +14,7 @@ routerApp.factory('DeviceService', function() {
     };
 });
 routerApp.config(function($stateProvider, $urlRouterProvider) {
-    $urlRouterProvider. therwise('/-home');
+    $urlRouterProvider.otherwise('/-home');
    // add states to the state provider
    console.log("router app---");
     $stateProvider.state('-home', {
