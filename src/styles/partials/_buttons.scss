@@ -1,3 +1,4 @@
+@mixin add-button-styles($bg-color:white,
 $foreground-color:white) {
     cursor: pointer;
     &:hover {
