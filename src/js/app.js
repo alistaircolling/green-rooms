@@ -1,6 +1,8 @@
 // When ready...
 var routerApp = angular.module('routerApp', ['uz.mailto', 'ui.router', 'ngAnimate']);
-//
+routerApp.run(function ( $rootScope, $state){
+    $rootScope.$state = $state;
+});
 //create device service first
 routerApp.factory('DeviceService', function() {  
     console.log("checking is mobile...");
