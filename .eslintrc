@@ -204,7 +204,7 @@
         "no-invalid-this": 2,
         "brace-style": [2, "1tbs", { "allowSingleLine": true }],
         "func-names": 2,
-        "indent": [4, 4, { "SwitchCase": 1 }],
+        "indent": [2, 2, { "SwitchCase": 1 }],
         "one-var": [2, { "uninitialized": "always", "initialized": "never" }],
         "operator-linebreak": [2, "after", { "overrides": { "?": "before", ":": "before" } }],
         "quotes": [2, "single", "avoid-escape"],
