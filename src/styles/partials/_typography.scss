@@ -116,18 +116,21 @@
     color: black;
 }
 .input-email{
-    font-size:.5em;
+    font-size:1em;
     border-style:solid;
     border-width:.1em;
-    border-color:red;
+    max-height: 3.5em;
+    border-color:black;
     min-width:24em;
 }
 .subscribe-button{
    //margin: 0 2em;
    cursor: pointer;
+   max-height: 3.5em;
    background-color:white;
    border-style:solid;
    border-color:black;
    border-width:0.1em;
    padding:.47em;
+   font-size: 1em;
 }
