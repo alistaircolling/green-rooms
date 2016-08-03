@@ -24,3 +24,7 @@
 .form-wrap{
     display: inline-block;
 }
+.no-wrap-overflows{
+   overflow-x:auto;
+   overflow-y:hidden;
+}
