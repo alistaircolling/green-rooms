@@ -1,12 +1,12 @@
 {
-    "parserOptions": {
-        "ecmaVersion": 6,
-            "sourceType": "module",
-            "ecmaFeatures": {
-                "jsx": true
-            }
+    "plugins": ["angular"],
+    "extends":"angular",
+    "env": {
+        "es6": true,
+        "browser": true,
+        "jasmine": true,
+        "commonjs": true,
     },
-
     "ecmaFeatures": {
         "arrowFunctions": true,
         "blockBindings": true,
@@ -278,5 +278,9 @@
         "angular/typecheck-string": 2,
         "angular/window-service": 2,
         "angular/no-http-callback": 2
+    },
+        "parseroptions": {
+        "sourcetype": "module",
     }
+
 }
