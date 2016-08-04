@@ -20,7 +20,8 @@
   ],
   "dependencies": {
     "angular-deckgrid": "~0.5.0",
-    "angular-mailto": "~0.1.0"
+    "angular-mailto": "~0.1.0",
+    "ngGAPI": "https://github.com/christiansmith/ngGAPI.git"
   },
   "resolutions": {
     "angular": "1.4.8"
