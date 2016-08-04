@@ -1,5 +1,18 @@
 // When ready...
-var routerApp = angular.module('routerApp', ['uz.mailto', 'ui.router', 'ngAnimate']);
+var routerApp = angular.module('routerApp', ['uz.mailto', 
+    'ui.router', 'ngAnimate', 'gapi']);
+// Configure Google API
+routerApp.value('GoogleApp', {
+    apiKey: 'AIzaSyCcSoCl6WtjI3JvMaS_jIl1A9N7yc8Bq7A',
+    clientId: '369552205698-78ulm4tth8gmrnfq17m2ugr9fu0q9elh.apps.googleusercontent.com',
+    scopes: [
+      // whatever scopes you need for your app, for example:
+      'https://www.googleapis.com/auth/calendar'
+      /*'https://www.googleapis.com/auth/youtube',*/
+      /*'https://www.googleapis.com/auth/userinfo.profile'*/
+      // ...
+    ]
+})
 routerApp.run(function ( $rootScope, $state){
     $rootScope.$state = $state;
 });
