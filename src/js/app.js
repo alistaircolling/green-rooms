@@ -18,7 +18,8 @@ routerApp.factory('DeviceService', function() {
 
 routerApp.service('CalendarService', ()=> {
 
-        return this.$http.get()
+    return this.$http.get(
+        'https://www.googleapis.com/calendar/v3/calendars/0gbh2vlcl091o66vo0p2di51p2mr4k0e%40import.calendar.google.com/events?key=AIzaSyCcSoCl6WtjI3JvMaS_jIl1A9N7yc8Bq7A')
             .then((response) =>{
                 return response.data;
                 this.$log.log('success');
@@ -143,6 +144,16 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
             '': {
                 templateUrl: 'partial-press.html',
                 controller: 'PressController'
+            }
+        }
+    })
+    .state('events', {
+        url: '/events',
+        views: {
+            //main template (notice blank string key)
+            '': {
+                templateUrl: 'partial-events.html',
+                controller: 'EventsController'
             }
         }
     });
