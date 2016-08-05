@@ -1,4 +1,4 @@
-routerApp.controller('rooms-controller', function($scope, Mailto) {
+angular.module('routerApp').controller('rooms-controller', function($scope, Mailto) {
     var recepient = "enquiries@green-rooms.com";
     $scope.href = Mailto.url(recepient);
     $scope.enquiryButton = "EMAIL TO BOOK";

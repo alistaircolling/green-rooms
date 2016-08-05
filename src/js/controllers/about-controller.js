@@ -1,5 +1,6 @@
-routerApp.controller('AboutController', function($scope) {
-    //Could inject data service here
+"use strict"
+angular.module('routerApp').controller('AboutController', ($scope) => {
+    // Could inject data service here
     $scope.title = 'Who stays here?';
 
     $scope.articles = [{

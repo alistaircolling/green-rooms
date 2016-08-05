@@ -1,4 +1,4 @@
-routerApp.controller('HeaderController', function($scope, $rootScope, $window, DeviceService) {
+angular.module('routerApp').controller('HeaderController', function($scope, $rootScope, $window, DeviceService) {
     console.log("header controller here");
      $scope.isMobileHeader = function() {
     var returnVal = (DeviceService.isMobile) ? "mobile-header" : "desktop-header";

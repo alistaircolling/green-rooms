@@ -1,4 +1,4 @@
-routerApp.filter("sanitize", ['$sce',
+angular.module('routerApp').filter("sanitize", ['$sce',
     function($sce) {
         return function(htmlCode) {
             return $sce.trustAsHtml(htmlCode);

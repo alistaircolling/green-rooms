@@ -1,4 +1,4 @@
-routerApp.controller('BuildingController', function($scope) {
+angular.module('routerApp').controller('BuildingController', function($scope) {
     //Could inject data service here
     $scope.title = 'Who stays here?';
 

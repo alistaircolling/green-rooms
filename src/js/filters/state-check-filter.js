@@ -1,4 +1,4 @@
-routerApp.filter('contains-state', function() {
+angular.module('routerApp').filter('contains-state', function() {
     return function(states, currentState) {
         return states.filter(function(currentState) 
                 {
