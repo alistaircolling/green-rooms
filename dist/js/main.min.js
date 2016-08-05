@@ -15,6 +15,21 @@ routerApp.factory('DeviceService', function() {
         isMobile: check
     };
 });
+
+routerApp.service('CalendarService', ()=> {
+
+        return this.$http.get()
+            .then((response) =>{
+                return response.data;
+                this.$log.log('success');
+            })
+            .catch((error)=>{
+                $log.log('error in json submit');
+            })
+
+}
+)
+
 routerApp.config(function($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise('/-home');
    // add states to the state provider
