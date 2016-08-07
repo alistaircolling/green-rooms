@@ -19,19 +19,10 @@ routerApp.factory('DeviceService', function() {
 routerApp.factory('CalendarService', ['$http', function($http){
     var CalendarService = {};
     CalendarService.getCalendar = function() {
-    return $http.get(
-        'https://www.googleapis.com/calendar/v3/calendars/0gbh2vlcl091o66vo0p2di51p2mr4k0e%40import.calendar.google.com/events?key=AIzaSyCcSoCl6WtjI3JvMaS_jIl1A9N7yc8Bq7A')
-            .then((response) =>{
-                return response.data;
-                this.$log.log('success');
-            })
-            .catch((error)=>{
-                $log.log('error in json submit');
-            })
-
+        return $http.get(
+            'https://www.googleapis.com/calendar/v3/calendars/rdgvlm3pas26prfqj49ncb11cg@group.calendar.google.com/events?key=AIzaSyCcSoCl6WtjI3JvMaS_jIl1A9N7yc8Bq7A')
     }
     return CalendarService;
-
 }
 ])
 

@@ -1,7 +1,19 @@
 <div class="">
     <div class="">
         <div class="h1">EVENTS</div>
-        <div class="">
+        <div class="" ng-repeat="event in events">
+            <div class="h3">{{event.summary}}</div><br/>
+            <div class="h3">{{event.start.date}}</div>
+<br/>
+            <div class="h3">{{event.start.dateTime}}</div>
+<br/>
+            <div class="h3">{{event.location}}</div>
+<br/>
+            <div class="p">{{event.description}}</div>
+<br/>
+            <div class="">
+                <img src="{{getImage(event.attachments[0].fileId)}}"/>
+            </div>
         </div>
     </div>
 </div>
