@@ -16,9 +16,10 @@ routerApp.factory('DeviceService', function() {
     };
 });
 
-routerApp.service('CalendarService', ()=> {
-
-    return this.$http.get(
+routerApp.factory('CalendarService', ['$http', function($http){
+    var CalendarService = {};
+    CalendarService.getCalendar = function() {
+    return $http.get(
         'https://www.googleapis.com/calendar/v3/calendars/0gbh2vlcl091o66vo0p2di51p2mr4k0e%40import.calendar.google.com/events?key=AIzaSyCcSoCl6WtjI3JvMaS_jIl1A9N7yc8Bq7A')
             .then((response) =>{
                 return response.data;
@@ -28,8 +29,11 @@ routerApp.service('CalendarService', ()=> {
                 $log.log('error in json submit');
             })
 
+    }
+    return CalendarService;
+
 }
-)
+])
 
 routerApp.config(function($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise('/-home');
