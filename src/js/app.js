@@ -1,5 +1,6 @@
 // When ready...
-var routerApp = angular.module('routerApp', ['uz.mailto', 'ui.router', 'ngAnimate']);
+var routerApp = angular.module('routerApp', ['uz.mailto', 'ui.router', 
+    'ngSanitize', 'ngAnimate']);
 routerApp.run(function ( $rootScope, $state){
     $rootScope.$state = $state;
 });
@@ -25,6 +26,17 @@ routerApp.factory('CalendarService', ['$http', function($http){
     return CalendarService;
 }
 ])
+
+routerApp.filter('urlify', function() {
+    return function(text){
+        var urlRegex = /(https?:\/\/[^\s]+)/g;
+        return text.toString().replace(urlRegex, function(url) {
+            return '<a href="' + url + '">' + url + '</a>';
+        })
+        // or alternatively
+        // return text.replace(urlRegex, '<a href="$1">$1</a>')
+    }
+})
 
 routerApp.config(function($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise('/-home');
