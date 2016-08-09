@@ -5,15 +5,17 @@
             <div class="h3">{{event.summary}}</div><br/>
             <div class="h3">{{event.start.date}}</div>
             <br/>
-            <div class="h3">{{event.start.dateTime}}</div>
+            <div class="h3">{{event.start.dateTime | date: "MM/dd/yyyy 'at' h:mma" }}</div>
             <br/>
             <div class="h3">{{event.location}}</div>
             <br/>
             <div class="p" ng-bind-html="trustAsHtml(event.description) 
-                | urlify"></div>
+            | urlify"></div>
             <br/>
-            <div class="" ng-repeat="attachment in event.attachments">
-                <img src="{{getImage(attachment.fileId)}}"/>
+            <div class="block" >
+                <div class="mx-auto center" ng-repeat="attachment in event.attachments">
+                    <img src="{{getImage(attachment.fileId)}}"/>
+                </div>
             </div>
         </div>
     </div>

@@ -27,6 +27,16 @@ routerApp.factory('CalendarService', ['$http', function($http){
 }
 ])
 
+routerApp.filter('formatDateTime', function() {
+    return function(text){
+        var urlRegex = /(https?:\/\/[^\s]+)/g;
+        return text.toString().replace(urlRegex, function(url) {
+            return '<a href="' + url + '">' + url + '</a>';
+        })
+        // or alternatively
+        // return text.replace(urlRegex, '<a href="$1">$1</a>')
+    }
+})
 routerApp.filter('urlify', function() {
     return function(text){
         var urlRegex = /(https?:\/\/[^\s]+)/g;
