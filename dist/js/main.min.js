@@ -1,6 +1,6 @@
 // When ready...
 var routerApp = angular.module('routerApp', ['uz.mailto', 'ui.router', 
-    'ngSanitize', 'ngAnimate']);
+    'ngSanitize', 'ngAnimate', 'angulartics', 'angulartics.google.analytics']);
 routerApp.run(function ( $rootScope, $state){
     $rootScope.$state = $state;
 });
