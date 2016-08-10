@@ -19,9 +19,24 @@ routerApp.factory('DeviceService', function() {
 
 routerApp.factory('CalendarService', ['$http', function($http){
     var CalendarService = {};
+    // timeStamp so only future events are retrieved
+    var timeStamp;
+
+    function ISODateString(d){
+        function pad(n){return n<10 ? '0'+n : n}
+        return d.getUTCFullYear()+'-'
+            + pad(d.getUTCMonth()+1)+'-'
+            + pad(d.getUTCDate())+'T'
+            + pad(d.getUTCHours())+':'
+            + pad(d.getUTCMinutes())+':'
+            + pad(d.getUTCSeconds())+'Z'
+    }
+
+    timeStamp = ISODateString(new Date());
+
     CalendarService.getCalendar = function() {
         return $http.get(
-            'https://www.googleapis.com/calendar/v3/calendars/rdgvlm3pas26prfqj49ncb11cg@group.calendar.google.com/events?key=AIzaSyCcSoCl6WtjI3JvMaS_jIl1A9N7yc8Bq7A')
+            'https://www.googleapis.com/calendar/v3/calendars/info@greenrooms.london/events?key=AIzaSyCcSoCl6WtjI3JvMaS_jIl1A9N7yc8Bq7A&timeMin='+timeStamp)
     }
     return CalendarService;
 }
