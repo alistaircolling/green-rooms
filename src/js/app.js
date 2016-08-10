@@ -36,7 +36,7 @@ routerApp.factory('CalendarService', ['$http', function($http){
 
     CalendarService.getCalendar = function() {
         return $http.get(
-            'https://www.googleapis.com/calendar/v3/calendars/info@greenrooms.london/events?key=AIzaSyCcSoCl6WtjI3JvMaS_jIl1A9N7yc8Bq7A&timeMin='+timeStamp)
+            'https://www.googleapis.com/calendar/v3/calendars/info@greenrooms.london/events?key=AIzaSyCcSoCl6WtjI3JvMaS_jIl1A9N7yc8Bq7A&orderBy=startTime&singleEvents=true&timeMin='+timeStamp)
     }
     return CalendarService;
 }
