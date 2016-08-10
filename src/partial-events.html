@@ -12,7 +12,7 @@
             <br/>
             <div class="block" >
                 <div class="mx-auto center p3" ng-repeat="attachment in event.attachments">
-                    <img src="{{getImage(attachment.fileId)}}"/>
+                    <img ng-src="{{getImage(attachment.fileId)}}"/>
                 </div>
             </div>
             <hr class="red-line"/>
