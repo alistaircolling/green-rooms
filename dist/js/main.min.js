@@ -1,9 +1,18 @@
 // When ready...
 var routerApp = angular.module('routerApp', ['uz.mailto', 'ui.router', 
     'ngSanitize', 'ngAnimate', 'angulartics', 'angulartics.google.analytics']);
+
 routerApp.run(function ( $rootScope, $state){
     $rootScope.$state = $state;
+    //$rootScope.on('$routeChangeSucess', ()=>{
+        //var interval = setInterval(()=>{
+            //if(document.readyState == 'complete'){
+
+            //}
+        //}, 200);
+    //})
 });
+
 //create device service first
 routerApp.factory('DeviceService', function() {  
     console.log("checking is mobile...");
