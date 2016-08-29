@@ -10,7 +10,6 @@ var gulp = require('gulp'),
     cache = require('gulp-cache'),
     sass = require('gulp-sass'),
     browserSync = require('browser-sync'),
-    favicons = require('gulp-favicons'),
     del = require('del'),
     jshint = require('gulp-jshint'),
     runSequence = require('run-sequence');
