@@ -3,19 +3,29 @@
     <div class="mobile-parent">
         <!--<div ng-bind="phoneNumberDial" />-->
         <div class="mobile-child">
+            <a ng-href="{{bookingLink}}" class="red-link">BOOK NOW</a>
+        </div>
+        <div class="mobile-child">
             <a ng-href="tel:{{phoneNumberDial}}" ng-bind="phoneNumberDisplay" class="blue-mobile-button blue-foreground"></a>
         </div>
         <div class="mobile-child">
             <a class="blue-mobile-button blue-foreground" ng-href="https://www.google.com/maps/place/Wood+Green,+London+N22+6UW,+UK/@51.5965996,-0.1129106,17z/data=!3m1!4b1!4m2!3m1!1s0x48761be233ff592d:0x1132e3a4c31ed7a"
-            ng-bind-html="address | sanitize"></a>
+                                                          ng-bind-html="address | sanitize"></a>
         </div>
         <div class="mobile-child">
-            <div class="blue-mobile-button blue-foreground" ui-sref="about"><span>ABOUT</span>
+            <div class="blue-mobile-button blue-foreground mx-auto" ui-sref="about"><span>ABOUT</span>
             </div>
         </div>
         <div class="mobile-child">
             <div class="blue-mobile-button blue-foreground" ui-sref="rooms"><span>ROOMS</span>
             </div>
         </div>
+        </div>
+
     </div>
-</div>
+    <div class="center" style="padding-top:3em" >
+        <a href="http://www.twitter.com/GreenRoomsHotel"><img src="assets/images/twitter.svg" alt="twitter" class="social-button-mobile"/></a>
+        <a href="https://www.facebook.com/GreenRoomsHotel/"><img src="assets/images/facebook.svg" alt="facebook" class="social-button-mobile"/></a>
+        <a href="https://www.instagram.com/greenroomshotel/"><img src="assets/images/instagram.svg" alt="instagram" class="social-button-mobile"/></a>
+        <a href="http://www.twitter.com/GreenRoomsHotel" class="black-copy">
+    </div>

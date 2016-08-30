@@ -54,7 +54,7 @@ gulp.task('copy-yml', function() {
         }))
         .pipe(gulp.dest('dist/'));
 });
-//TODO - figure out how bower libs are meant to be copied across
+//TODO - figure out how bower libs are meant to be copied across properly
 gulp.task('copy-bower', function() {
     return gulp.src('bower_components/*/*.js').pipe(plumber({
             errorHandler: function(error) {
@@ -112,8 +112,8 @@ gulp.task('scripts', function() {
             }
         }))
         //check for errors
-        .pipe(jshint())
-        .pipe(jshint.reporter('default'))
+        //.pipe(jshint())
+        //.pipe(jshint.reporter('default'))
 
     /* concat all js into one main.js file */
     .pipe(concat('main.js'))

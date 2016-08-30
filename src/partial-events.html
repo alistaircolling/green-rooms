@@ -1,0 +1,21 @@
+<div class="">
+    <div class="">
+        <div class="p4"></div>
+        <div class="p3" ng-repeat="event in events">
+            <!--<div class="h1">{{event.start.date}}</div>-->
+            <div class="h2">{{event.start.dateTime | date: "d MMMM yyyy 'at' h:mma" }}</div>
+            <div class="h2">{{event.summary}}</div>
+            <div class="h3">{{event.location}}</div>
+            <br/>
+            <div class="p" ng-bind-html="trustAsHtml(event.description) 
+            | urlify"></div>
+            <br/>
+            <div class="block" >
+                <div class="mx-auto center p3" ng-repeat="attachment in event.attachments">
+                    <img ng-src="{{getImage(attachment.fileId)}}"/>
+                </div>
+            </div>
+            <hr class="red-line"/>
+        </div>
+    </div>
+</div>

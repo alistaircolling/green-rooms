@@ -1,15 +1,11 @@
-$blue:#034EC9;
- $red:#EF4123;
- $total-patterns:6;
+$blue:#034ec9;
+$red:#ef4123;
+$total-patterns:6;
 //List used to generate classes
-$colors:"red" #EF4123,
-blue #034EC9;
+$colors:'red' #ef4123, blue #034ec9;
 //TODO add dynamic generation of patterns based on number and buttons based on colors
 //MENU STUFF
 .float-wrap {
-    /* 816 = <number of floats> * (<float width> + 2 * <float border width>) */
-    /*border: 1px solid;*/
-    /* causes .vertical-scroll's height to match its child divs' */
     overflow: auto;
 }
 @mixin left-floater() {

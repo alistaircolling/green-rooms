@@ -1,6 +1,11 @@
 routerApp.controller('HeaderController', function($scope, $rootScope, $window, DeviceService) {
     console.log("header controller here");
-     $scope.isMobileHeader = function() {
+
+    $scope.getClass = function (path) {
+        return ($location.path().substr(0, path.length) === path) ? 'active' : '';
+    };
+
+    $scope.isMobileHeader = function() {
     var returnVal = (DeviceService.isMobile) ? "mobile-header" : "desktop-header";
     return returnVal;
     };
