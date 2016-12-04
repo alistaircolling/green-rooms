@@ -61,6 +61,13 @@ routerApp.filter('formatDateTime', function() {
         // return text.replace(urlRegex, '<a href="$1">$1</a>')
     }
 })
+.filter('trusted',
+   function($sce) {
+     return function(ss) {
+       return $sce.trustAsHtml(ss)
+     };
+   }
+)
 routerApp.filter('urlify', function() {
     return function(text){
         var urlRegex = /(https?:\/\/[^\s]+)/g;
