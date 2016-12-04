@@ -1,4 +1,4 @@
-// TODO make sure that all tasks complete before launching browsersync
+//TODO make sure that all tasks complete before launching browsersync
 var gulp = require('gulp'),
     plumber = require('gulp-plumber'),
     rename = require('gulp-rename'),
@@ -14,19 +14,19 @@ var gulp = require('gulp'),
     jshint = require('gulp-jshint'),
     runSequence = require('run-sequence');
 
-gulp.task('browser-sync', function () {
+gulp.task('browser-sync', function() {
     browserSync({
         server: {
-            baseDir: 'dist/'
+            baseDir: "dist/"
         }
     });
 });
 
-gulp.task('bs-reload', function () {
+gulp.task('bs-reload', function() {
     browserSync.reload();
 });
 
-gulp.task('images', function () {
+gulp.task('images', function() {
     return gulp.src('src/assets/images/*.jpg')
         .pipe(imageminJpegtran({
             progressive: true
@@ -34,9 +34,9 @@ gulp.task('images', function () {
         .pipe(gulp.dest('dist/assets/images'));
 });
 
-gulp.task('fonts', function () {
+gulp.task('fonts', function() {
     return gulp.src('src/assets/fonts/*.otf').pipe(plumber({
-        errorHandler(error) {
+        errorHandler: function(error) {
             console.log(error.message);
             this.emit('end');
         }
@@ -45,20 +45,19 @@ gulp.task('fonts', function () {
     .pipe(gulp.dest('dist/assets/fonts/'));
 });
 
-gulp.task('copy-yml', function () {
+gulp.task('copy-yml', function() {
     return gulp.src('src/*.yml').pipe(plumber({
-            errorHandler(error) {
+            errorHandler: function(error) {
                 console.log(error.message);
                 this.emit('end');
             }
         }))
         .pipe(gulp.dest('dist/'));
 });
-
-// TODO - figure out how bower libs are meant to be copied across properly
-gulp.task('copy-bower', function () {
+//TODO - figure out how bower libs are meant to be copied across properly
+gulp.task('copy-bower', function() {
     return gulp.src('bower_components/*/*.js').pipe(plumber({
-            errorHandler(error) {
+            errorHandler: function(error) {
                 console.log(error.message);
                 this.emit('end');
             }
@@ -66,30 +65,29 @@ gulp.task('copy-bower', function () {
         .pipe(gulp.dest('dist/js/'));
 });
 
-gulp.task('copy-basscss', function () {
+gulp.task('copy-basscss', function() {
     return gulp.src('src/styles/basscss.min.css').pipe(plumber({
-            errorHandler(error) {
+            errorHandler: function(error) {
                 console.log(error.message);
                 this.emit('end');
             }
         }))
         .pipe(gulp.dest('dist/styles/'));
 });
-gulp.task('copy-svgs', function () {
+gulp.task('copy-svgs', function() {
     return gulp.src('src/assets/images/*.svg').pipe(plumber({
-            errorHandler(error) {
+            errorHandler: function(error) {
                 console.log(error.message);
                 this.emit('end');
             }
         }))
         .pipe(gulp.dest('dist/assets/images/'));
 });
-
-// Old styles function
-gulp.task('styles', function () {
+//Old styles function
+gulp.task('styles', function() {
     return gulp.src(['src/styles/main.scss'])
         .pipe(plumber({
-            errorHandler(error) {
+            errorHandler: function(error) {
                 console.log(error.message);
                 this.emit('end');
             }
@@ -102,42 +100,38 @@ gulp.task('styles', function () {
         }));
 });
 
-gulp.task('local-sass', function () {
+gulp.task('local-sass', function(){
 });
 
-gulp.task('scripts', function () {
+gulp.task('scripts', function() {
     return gulp.src('src/js/**/*.js')
         .pipe(plumber({
-            errorHandler(error) {
+            errorHandler: function(error) {
                 console.log(error.message);
                 this.emit('end');
             }
         }))
-
-        // check for errors
-        // .pipe(jshint())
-        // .pipe(jshint.reporter('default'))
+        //check for errors
+        //.pipe(jshint())
+        //.pipe(jshint.reporter('default'))
 
     /* concat all js into one main.js file */
     .pipe(concat('main.js'))
-
         // rename .min
         .pipe(rename({
             suffix: '.min'
         }))
-
         // uglify
      //     .pipe(uglify())
-        // put back in dist folder
+        //put back in dist folder
         .pipe(gulp.dest('dist/js/'))
-
-        // reload BS
+        //reload BS
         .pipe(browserSync.reload({
             stream: true
         }));
 });
 
-gulp.task('json', function () {
+gulp.task('json', function() {
     return gulp.src(['src/assets/pages/*.json'])
         .pipe(gulp.dest('dist/assets/pages/'))
         .pipe(browserSync.reload({
@@ -145,7 +139,7 @@ gulp.task('json', function () {
         }));
 });
 
-gulp.task('html', function () {
+gulp.task('html', function() {
     return gulp.src(['src/*.html'])
         .pipe(gulp.dest('dist/'))
         .pipe(browserSync.reload({
@@ -154,28 +148,28 @@ gulp.task('html', function () {
 });
 
 /* Clean the dist folder */
-gulp.task('clean', function () {
+gulp.task('clean', function() {
     return del(['dist']);
 });
 
-gulp.task('watch', function () {
-    // gulp.watch("src/styles/*.scss", ['sass']);
-    gulp.watch('src/styles/**/**/*.scss', ['sass']);
-    gulp.watch('src/js/**/*.js', ['scripts']);
-    gulp.watch('src/*.html', ['html']);
-    gulp.watch('src/assets/images/*.jpg', ['images']);
-    gulp.watch('src/assets/pages/*.json', ['json']);
-    gulp.watch('src/assets/images/*.svg', ['copy-svgs']);
-    gulp.watch('src/assets/fonts/*.otf', ['fonts']);
+gulp.task('watch', function() {
+    //gulp.watch("src/styles/*.scss", ['sass']);
+    gulp.watch("src/styles/**/**/*.scss", ['sass']);
+    gulp.watch("src/js/**/*.js", ['scripts']);
+    gulp.watch("src/*.html", ['html']);
+    gulp.watch("src/assets/images/*.jpg", ['images']);
+    gulp.watch("src/assets/pages/*.json", ['json']);
+    gulp.watch("src/assets/images/*.svg", ['copy-svgs']);
+    gulp.watch("src/assets/fonts/*.otf", ['fonts']);
 });
 
-// ///  SASS STUFF ////////////////////////////////////////////////////////////////////////////////
+/////  SASS STUFF //////////////////////////////////////////////////////////////////////////////// 
 
 
 // This is an object which defines paths for the styles.
 // Can add paths for javascript or images for example
 // The folder, files to look for and destination are all required for sass
-const paths = {
+var paths = {
 
     styles: {
         src: 'src/styles',
@@ -187,11 +181,11 @@ const paths = {
 
 // A display error function, to format and make custom errors more uniform
 // Could be combined with gulp-util or npm colors for nicer output
-const displayError = function (error) {
+var displayError = function(error) {
 
     // Initial building up of the error
-    let errorString = '[' + error.plugin + ']';
-    errorString += ' ' + error.message.replace('\n', ''); // Removes new line at the end
+    var errorString = '[' + error.plugin + ']';
+    errorString += ' ' + error.message.replace("\n", ''); // Removes new line at the end
 
     // If the error contains the filename or line number add it to the string
     if (error.fileName)
@@ -206,10 +200,9 @@ const displayError = function (error) {
 };
 
 // Setting up the sass task
-gulp.task('sass', function () {
+gulp.task('sass', function() {
     // Taking the path from the above object
     return gulp.src(paths.styles.files)
-
         // Sass options - make the output compressed and add the source map
         // Also pull the include path from the paths object
         .pipe(sass({
@@ -217,17 +210,14 @@ gulp.task('sass', function () {
             sourceComments: 'map',
             includePaths: [paths.styles.src]
         }))
-
         // If there is an error, don't stop compiling but use the custom displayError function
-        .on('error', function (err) {
+        .on('error', function(err) {
             displayError(err);
         })
-
-        // Pass the compiled sass through the prefixer with defined
+        // Pass the compiled sass through the prefixer with defined 
         .pipe(prefix(
             'last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'
         ))
-
         // Funally put the compiled sass into a css file
         .pipe(gulp.dest(paths.styles.dest))
 
@@ -238,16 +228,17 @@ gulp.task('sass', function () {
     );
 
 
+
 });
 
 
-gulp.task('build', function (callback) {
-    // wait until clean has finished before running other tasks in paralell
+gulp.task('build', function(callback) {
+    //wait until clean has finished before running other tasks in paralell
     runSequence('clean', ['styles', 'scripts', 'html', 'images', 'copy-svgs', 'fonts'], callback);
 });
 
-gulp.task('default', function (callback) {
-    // wait until clean has finished before running other tasks in paralell
+gulp.task('default', function(callback) {
+    //wait until clean has finished before running other tasks in paralell
     runSequence('clean', ['sass', 'scripts', 'html', 'images', 'json', 'copy-yml',
             'copy-svgs', 'fonts', 'copy-bower', 'copy-basscss'
         ], 'browser-sync', 'watch',
