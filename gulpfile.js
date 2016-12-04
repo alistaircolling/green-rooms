@@ -131,6 +131,14 @@ gulp.task('scripts', function() {
         }));
 });
 
+gulp.task('json', function() {
+    return gulp.src(['src/assets/pages/*.json'])
+        .pipe(gulp.dest('dist/assets/pages/'))
+        .pipe(browserSync.reload({
+            stream: true
+        }));
+});
+
 gulp.task('html', function() {
     return gulp.src(['src/*.html'])
         .pipe(gulp.dest('dist/'))
@@ -230,7 +238,7 @@ gulp.task('build', function(callback) {
 
 gulp.task('default', function(callback) {
     //wait until clean has finished before running other tasks in paralell
-    runSequence('clean', ['sass', 'scripts', 'html', 'images', 'copy-yml',
+    runSequence('clean', ['sass', 'scripts', 'html', 'images', 'json', 'copy-yml',
             'copy-svgs', 'fonts', 'copy-bower', 'copy-basscss'
         ], 'browser-sync', 'watch',
         callback);

@@ -26,6 +26,16 @@ routerApp.factory('DeviceService', function() {
     };
 });
 
+routerApp.factory('CopyService', ['$http', function($http){
+    var CopyService = {};
+
+    CopyService.getPage = function(pageName){
+        return $http.get( "assets/pages/" + pageName + ".json")
+    }
+
+    return CopyService;
+}])
+
 routerApp.factory('CalendarService', ['$http', function($http){
     var CalendarService = {};
     // timeStamp so only future events are retrieved
